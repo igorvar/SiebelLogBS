@@ -1,11 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <REPOSITORY
    COMMENTS="UpgEimColAPPLIED_PATCHES:Grid,UINavUpgrade,MVGUpgPatch77,UINavUpgrade,PCLWebTemplSwap,WFD,PM8.1.1"
    NAME="Siebel Repository"
-   UPDATED="09/07/2009 15:21:14"
-   UPDATED_BY="SADMIN"
-   CREATED="09/01/2009 14:28:55"
-   CREATED_BY="SADMIN"
    FIO_PLACEHOLDER_FIO="TRUE">
 	<PROJECT
 	   ALLOW_OBJECT_LOCKING="Y"
@@ -13,9 +9,6 @@
 	   LOCKED="N"
 	   NAME="KH Interface"
 	   UI_FREEZE="N"
-	   UPDATED="03/08/2016 13:48:12"
-	   UPDATED_BY="DANAS1"
-	   CREATED="09/02/2009 19:15:29"
 	   CREATED_BY="SADMIN"
 	   FIO_PLACEHOLDER_FIO="TRUE">
 		<BUSINESS_SERVICE
@@ -29,18 +22,10 @@
 		   SERVER_ENABLED="N"
 		   STATE_MANAGEMENT_TYPE="Stateful"
 		   WEB_SERVICE_ENABLED="N"
-		   UPDATED="05/29/2011 14:19:59"
-		   UPDATED_BY="YUVALY1"
-		   CREATED="08/30/2010 18:31:37"
-		   CREATED_BY="YUVALY1">
 			<BUSINESS_SERVICE_METHOD
 			   HIDDEN="N"
 			   INACTIVE="N"
 			   NAME="ActiveDirectoryData"
-			   UPDATED="05/18/2011 18:37:12"
-			   UPDATED_BY="YUVALY1"
-			   CREATED="05/09/2011 11:54:19"
-			   CREATED_BY="YUVALY1">
 				<BUSINESS_SERVICE_METHOD_ARG
 				   COMMENTS="Current domain by default"
 				   DATA_TYPE="String"
@@ -50,10 +35,6 @@
 				   OPTIONAL="Y"
 				   STORAGE_TYPE="Property"
 				   TYPE="Input / Output"
-				   UPDATED="05/09/2011 11:54:19"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="05/09/2011 11:54:19"
-				   CREATED_BY="YUVALY1">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
 				   DATA_TYPE="Number"
@@ -63,10 +44,6 @@
 				   OPTIONAL="N"
 				   STORAGE_TYPE="Property"
 				   TYPE="Output"
-				   UPDATED="05/09/2011 11:54:19"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="05/09/2011 11:54:19"
-				   CREATED_BY="YUVALY1">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
 				   DATA_TYPE="String"
@@ -76,10 +53,6 @@
 				   OPTIONAL="N"
 				   STORAGE_TYPE="Property"
 				   TYPE="Output"
-				   UPDATED="05/09/2011 11:54:19"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="05/09/2011 11:54:19"
-				   CREATED_BY="YUVALY1">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
 				   COMMENTS="Date in format DD/MM/YYYY hh:mm:ss"
@@ -89,11 +62,7 @@
 				   NAME="PasswordExpirationDate"
 				   OPTIONAL="Y"
 				   STORAGE_TYPE="Property"
-				   TYPE="Output"
-				   UPDATED="05/09/2011 11:54:19"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="05/09/2011 11:54:19"
-				   CREATED_BY="YUVALY1">
+				   TYPE="Output">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
 				   COMMENTS="Y or N"
@@ -103,11 +72,7 @@
 				   NAME="PasswordNeverExpires"
 				   OPTIONAL="N"
 				   STORAGE_TYPE="Property"
-				   TYPE="Output"
-				   UPDATED="05/18/2011 18:37:12"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="05/18/2011 18:37:04"
-				   CREATED_BY="YUVALY1">
+				   TYPE="Output">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
 				   COMMENTS="Y or N"
@@ -117,11 +82,7 @@
 				   NAME="PasswordRequired"
 				   OPTIONAL="N"
 				   STORAGE_TYPE="Property"
-				   TYPE="Output"
-				   UPDATED="05/18/2011 18:36:06"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="05/18/2011 18:24:06"
-				   CREATED_BY="YUVALY1">
+				   TYPE="Output">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
 				   DATA_TYPE="String"
@@ -130,22 +91,14 @@
 				   NAME="UserName"
 				   OPTIONAL="N"
 				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="05/09/2011 11:54:19"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="05/09/2011 11:54:19"
-				   CREATED_BY="YUVALY1">
+				   TYPE="Input">
 				</BUSINESS_SERVICE_METHOD_ARG>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_METHOD
 			   COMMENTS="Return PS with list of files by mask. Output properties with names 1...N."
 			   HIDDEN="N"
 			   INACTIVE="N"
-			   NAME="DirWrapper"
-			   UPDATED="02/27/2011 12:32:45"
-			   UPDATED_BY="YUVALY1"
-			   CREATED="08/30/2010 18:50:29"
-			   CREATED_BY="YUVALY1">
+			   NAME="DirWrapper">
 				<BUSINESS_SERVICE_METHOD_ARG
 				   COMMENTS="Name of first file by mask."
 				   DATA_TYPE="String"
@@ -154,11 +107,7 @@
 				   NAME="1"
 				   OPTIONAL="Y"
 				   STORAGE_TYPE="Property"
-				   TYPE="Output"
-				   UPDATED="02/27/2011 12:32:33"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="02/27/2011 12:30:29"
-				   CREATED_BY="YUVALY1">
+				   TYPE="Output">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
 				   COMMENTS="Name of second file by mask."
@@ -168,11 +117,7 @@
 				   NAME="2"
 				   OPTIONAL="Y"
 				   STORAGE_TYPE="Property"
-				   TYPE="Output"
-				   UPDATED="02/27/2011 12:32:45"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="02/27/2011 12:32:33"
-				   CREATED_BY="YUVALY1">
+				   TYPE="Output">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
 				   COMMENTS="0 - Normal files (no attributes set), 2 - Normal and hidden files, 4 - Normal and system files, 8 - Volume label (only), 16 - Normal files and folders. IgorV. 27.02.11. Prev data type string"
@@ -182,11 +127,7 @@
 				   NAME="Attributes"
 				   OPTIONAL="Y"
 				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="02/27/2011 12:28:09"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="08/30/2010 18:51:45"
-				   CREATED_BY="YUVALY1">
+				   TYPE="Input">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
 				   COMMENTS="c:\*.txt"
@@ -196,11 +137,7 @@
 				   NAME="Pathname"
 				   OPTIONAL="N"
 				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="08/30/2010 18:52:55"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="08/30/2010 18:52:20"
-				   CREATED_BY="YUVALY1">
+				   TYPE="Input">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_LOCALE
 				   APPLICATION_CODE="STD"
@@ -208,22 +145,14 @@
 				   INACTIVE="N"
 				   LANGUAGE_CODE="HEB"
 				   NAME="HEB-STD"
-				   TRANSLATE="Y"
-				   UPDATED="08/30/2010 18:50:53"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="08/30/2010 18:50:53"
-				   CREATED_BY="YUVALY1">
+				   TRANSLATE="Y">
 				</BUSINESS_SERVICE_METHOD_LOCALE>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_METHOD
 			   COMMENTS="Remove specified file. IgorV. Inactivated. To Use Clib.remove(fileName) function"
 			   HIDDEN="N"
 			   INACTIVE="Y"
-			   NAME="KillWrapper"
-			   UPDATED="10/25/2010 18:19:24"
-			   UPDATED_BY="YUVALY1"
-			   CREATED="08/31/2010 10:51:08"
-			   CREATED_BY="YUVALY1">
+			   NAME="KillWrapper">
 				<BUSINESS_SERVICE_METHOD_ARG
 				   COMMENTS="C:\SiebelLog\Siebel.Log"
 				   DATA_TYPE="String"
@@ -232,11 +161,7 @@
 				   NAME="Pathname"
 				   OPTIONAL="N"
 				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="08/31/2010 10:54:33"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="08/31/2010 10:51:08"
-				   CREATED_BY="YUVALY1">
+				   TYPE="Input">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_LOCALE
 				   APPLICATION_CODE="STD"
@@ -244,11 +169,7 @@
 				   INACTIVE="N"
 				   LANGUAGE_CODE="HEB"
 				   NAME="HEB-STD"
-				   TRANSLATE="Y"
-				   UPDATED="08/31/2010 10:52:29"
-				   UPDATED_BY="YUVALY1"
-				   CREATED="08/31/2010 10:51:08"
-				   CREATED_BY="YUVALY1">
+				   TRANSLATE="Y">
 				</BUSINESS_SERVICE_METHOD_LOCALE>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
@@ -305,11 +226,7 @@
 	Set oAD = Nothing
 
 End Sub"
-			   SEQUENCE="1"
-			   UPDATED="05/29/2011 13:48:48"
-			   UPDATED_BY="YUVALY1"
-			   CREATED="05/09/2011 11:54:19"
-			   CREATED_BY="YUVALY1">
+			   SEQUENCE="1">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
 			   INACTIVE="N"
@@ -331,11 +248,7 @@ End Sub"
 		folder = Dir
 	Loop
 End Sub"
-			   SEQUENCE="2"
-			   UPDATED="05/09/2011 11:54:19"
-			   UPDATED_BY="YUVALY1"
-			   CREATED="08/30/2010 19:10:33"
-			   CREATED_BY="YUVALY1">
+			   SEQUENCE="2">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
 			   INACTIVE="N"
@@ -347,11 +260,7 @@ End Sub"
 	file = ips.GetProperty(&quot;Pathname&quot;)
 	Kill file
 End Sub"
-			   SEQUENCE="3"
-			   UPDATED="05/09/2011 11:54:19"
-			   UPDATED_BY="YUVALY1"
-			   CREATED="08/31/2010 10:50:10"
-			   CREATED_BY="YUVALY1">
+			   SEQUENCE="3">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
 			   INACTIVE="N"
@@ -361,11 +270,7 @@ End Sub"
 	
 	Service_PreCanInvokeMethod = ContinueOperation
 End Function"
-			   SEQUENCE="4"
-			   UPDATED="05/09/2011 11:54:19"
-			   UPDATED_BY="YUVALY1"
-			   CREATED="08/30/2010 19:00:48"
-			   CREATED_BY="YUVALY1">
+			   SEQUENCE="4">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
 			   INACTIVE="N"
@@ -386,15 +291,8 @@ End Function"
 		Service_PreInvokeMethod = ContinueOperation
 	End Select 
 End Function"
-			   SEQUENCE="5"
-			   UPDATED="05/09/2011 11:54:20"
-			   UPDATED_BY="YUVALY1"
-			   CREATED="08/30/2010 18:59:24"
-			   CREATED_BY="YUVALY1">
+			   SEQUENCE="5">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 		</BUSINESS_SERVICE>
 	</PROJECT>
 </REPOSITORY>
-
-
-
