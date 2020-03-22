@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   COMMENTS="UpgEimColAPPLIED_PATCHES:Grid,UINavUpgrade,MVGUpgPatch77,UINavUpgrade,PCLWebTemplSwap,WFD,PM8.1.1"
+   NAME="Siebel Repository"
+   UPDATED="09/07/2009 15:21:14"
+   UPDATED_BY="SADMIN"
+   CREATED="09/01/2009 14:28:55"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   INACTIVE="N"
+	   LOCKED="N"
+	   NAME="KH Interface"
+	   UI_FREEZE="N"
+	   UPDATED="03/08/2016 13:48:12"
+	   UPDATED_BY="DANAS1"
+	   CREATED="09/02/2009 19:15:29"
+	   CREATED_BY="SADMIN"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<BUSINESS_SERVICE
+		   CACHE="N"
+		   CLASS="CSSService"
+		   EXTERNAL_USE="Y"
+		   HIDDEN="N"
+		   INACTIVE="N"
+		   NAME="KH Basic function wrapper BS"
+		   OBJECT_LOCKED="N"
+		   SERVER_ENABLED="N"
+		   STATE_MANAGEMENT_TYPE="Stateful"
+		   WEB_SERVICE_ENABLED="N"
+		   UPDATED="05/29/2011 14:19:59"
+		   UPDATED_BY="YUVALY1"
+		   CREATED="08/30/2010 18:31:37"
+		   CREATED_BY="YUVALY1">
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="ActiveDirectoryData"
+			   UPDATED="05/18/2011 18:37:12"
+			   UPDATED_BY="YUVALY1"
+			   CREATED="05/09/2011 11:54:19"
+			   CREATED_BY="YUVALY1">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Current domain by default"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Domain"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input / Output"
+				   UPDATED="05/09/2011 11:54:19"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="05/09/2011 11:54:19"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Number"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ErrCode"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="05/09/2011 11:54:19"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="05/09/2011 11:54:19"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ErrDescription"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="05/09/2011 11:54:19"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="05/09/2011 11:54:19"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Date in format DD/MM/YYYY hh:mm:ss"
+				   DATA_TYPE="Date"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="PasswordExpirationDate"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="05/09/2011 11:54:19"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="05/09/2011 11:54:19"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Y or N"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="PasswordNeverExpires"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="05/18/2011 18:37:12"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="05/18/2011 18:37:04"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Y or N"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="PasswordRequired"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="05/18/2011 18:36:06"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="05/18/2011 18:24:06"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="UserName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED="05/09/2011 11:54:19"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="05/09/2011 11:54:19"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   COMMENTS="Return PS with list of files by mask. Output properties with names 1...N."
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="DirWrapper"
+			   UPDATED="02/27/2011 12:32:45"
+			   UPDATED_BY="YUVALY1"
+			   CREATED="08/30/2010 18:50:29"
+			   CREATED_BY="YUVALY1">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Name of first file by mask."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="1"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="02/27/2011 12:32:33"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="02/27/2011 12:30:29"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Name of second file by mask."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="2"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="02/27/2011 12:32:45"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="02/27/2011 12:32:33"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="0 - Normal files (no attributes set), 2 - Normal and hidden files, 4 - Normal and system files, 8 - Volume label (only), 16 - Normal files and folders. IgorV. 27.02.11. Prev data type string"
+				   DATA_TYPE="Number"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Attributes"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED="02/27/2011 12:28:09"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="08/30/2010 18:51:45"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="c:\*.txt"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Pathname"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED="08/30/2010 18:52:55"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="08/30/2010 18:52:20"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_LOCALE
+				   APPLICATION_CODE="STD"
+				   DISPLAY_NAME="Dir"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="HEB"
+				   NAME="HEB-STD"
+				   TRANSLATE="Y"
+				   UPDATED="08/30/2010 18:50:53"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="08/30/2010 18:50:53"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_LOCALE>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   COMMENTS="Remove specified file. IgorV. Inactivated. To Use Clib.remove(fileName) function"
+			   HIDDEN="N"
+			   INACTIVE="Y"
+			   NAME="KillWrapper"
+			   UPDATED="10/25/2010 18:19:24"
+			   UPDATED_BY="YUVALY1"
+			   CREATED="08/31/2010 10:51:08"
+			   CREATED_BY="YUVALY1">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="C:\SiebelLog\Siebel.Log"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Pathname"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED="08/31/2010 10:54:33"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="08/31/2010 10:51:08"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_LOCALE
+				   APPLICATION_CODE="STD"
+				   DISPLAY_NAME="Kill"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="HEB"
+				   NAME="HEB-STD"
+				   TRANSLATE="Y"
+				   UPDATED="08/31/2010 10:52:29"
+				   UPDATED_BY="YUVALY1"
+				   CREATED="08/31/2010 10:51:08"
+				   CREATED_BY="YUVALY1">
+				</BUSINESS_SERVICE_METHOD_LOCALE>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="ActiveDirectoryData"
+			   PROGRAM_LANGUAGE="SBL"
+			   SCRIPT="Sub ActiveDirectoryData(ips As PropertySet, ops As PropertySet)
+	&apos;IgorV. 09.05.2011
+	&apos;Function return PasswordExpirationDate from Active Directory for UserName of Domain 
+	&apos;and Return ErrCode = 0; ErrDescription = &quot;OK&quot;
+	&apos;if Domain is missed function get data from current domain of SiebelServer
+	&apos;
+	Dim userName As String
+	Dim domain As String
+	Dim oAD As Object
+	Dim substrFrom As Integer
+	Dim substrTo As Integer
+	Dim flags As Long
+	Dim isPasswordNeverExpires As Long
+	
+	userName = ips.GetProperty(&quot;UserName&quot;)
+	domain = ips.GetProperty(&quot;Domain&quot;)
+	If domain = &quot;&quot; Then
+		Set oAD = GetObject(&quot;LDAP://RootDSE&quot;)
+		domain = oAD.Get(&quot;defaultNamingContext&quot;) &apos;after this domain = DC=clalit,DC=org,DC=il
+&apos;		ops.SetProperty &quot;defaultNamingContext&quot;, domain &apos; for testing only
+		substrFrom = InStr(1, domain, &quot;DC=&quot;, 1)
+		substrTo = InStr(substrFrom, domain, &quot;,&quot;)
+		domain = Mid$(domain, substrFrom, substrTo - substrFrom) &apos;domain = DC=clalit
+
+		substrFrom = InStr(1, domain, &quot;=&quot;, 1)
+		domain = Mid$(domain, substrFrom + 1) &apos;domain = clalit
+	End If
+	
+	ops.SetProperty &quot;Domain&quot;, domain
+	On Error Resume Next
+	Set oAD = GetObject(&quot;WinNT://&quot; &amp; domain &amp; &quot;/&quot; &amp; userName &amp; &quot;, user&quot;)
+	Select Case Err
+		Case 0
+			On Error GoTo 0
+			ops.SetProperty &quot;ErrDescription&quot;, &quot;Ok&quot;
+			ops.SetProperty &quot;PasswordExpirationDate&quot;, CStr(oAD.PasswordExpirationDate)
+			If oAD.PasswordRequired = 0 Then ops.SetProperty &quot;PasswordRequired&quot;,  &quot;N&quot; Else ops.SetProperty &quot;PasswordRequired&quot;, &quot;Y&quot;
+			flags = CLng(oAD.Get(&quot;UserFlags&quot;))
+&apos;			ops.SetProperty &quot;flags&quot;, CStr(flags)
+			isPasswordNeverExpires = (flags And &amp;H10000) &apos;http://msdn.microsoft.com/en-us/library/aa746537(VS.85).aspx
+			If isPasswordNeverExpires = 0 Then ops.SetProperty &quot;PasswordNeverExpires&quot;, &quot;N&quot; Else ops.SetProperty &quot;PasswordNeverExpires&quot;, &quot;Y&quot;
+		Case 429
+			ops.SetProperty &quot;ErrorDescription&quot;, &quot;Imposible get data about &apos;user&apos; with name &apos;&quot; &amp; userName &amp; &quot;&apos; for domain &apos;&quot; &amp; domain &amp; &quot;&apos;&quot;
+		Case Else
+			ops.SetProperty &quot;ErrorDescription&quot;, &quot;Unknown error. Read Bookshelf &apos;Siebel VB Language Reference&quot;							
+	End Select
+	ops.SetProperty &quot;ErrCode&quot;, CStr(Err)
+	Set oAD = Nothing
+
+End Sub"
+			   SEQUENCE="1"
+			   UPDATED="05/29/2011 13:48:48"
+			   UPDATED_BY="YUVALY1"
+			   CREATED="05/09/2011 11:54:19"
+			   CREATED_BY="YUVALY1">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="DirWrapper"
+			   PROGRAM_LANGUAGE="SBL"
+			   SCRIPT="Sub DirWrapper(ips As PropertySet, ops As PropertySet)&apos;(pathname, attributes)
+	Dim path As String
+	Dim attrib As Integer&apos;String
+	Dim folder As String
+	Dim index As Long
+	index = 1
+	path = ips.Getproperty(&quot;Pathname&quot;)
+	attrib = CInt(ips.Getproperty(&quot;Attributes&quot;))
+	ops.Reset
+	folder = Dir (path, attrib)
+	Do While folder &lt;&gt; &quot;&quot;
+		ops.SetProperty CStr(index), folder&apos;, attrib
+		index = index + 1
+		folder = Dir
+	Loop
+End Sub"
+			   SEQUENCE="2"
+			   UPDATED="05/09/2011 11:54:19"
+			   UPDATED_BY="YUVALY1"
+			   CREATED="08/30/2010 19:10:33"
+			   CREATED_BY="YUVALY1">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="KillWrapper"
+			   PROGRAM_LANGUAGE="SBL"
+			   SCRIPT="Sub KillWrapper(ips As PropertySet, ops As PropertySet)
+	TheApplication.RaiseErrorText &quot;This Method not in use. For removing files need to use Clib.remove(file name)&quot;
+	Dim file As String
+	file = ips.GetProperty(&quot;Pathname&quot;)
+	Kill file
+End Sub"
+			   SEQUENCE="3"
+			   UPDATED="05/09/2011 11:54:19"
+			   UPDATED_BY="YUVALY1"
+			   CREATED="08/31/2010 10:50:10"
+			   CREATED_BY="YUVALY1">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="Service_PreCanInvokeMethod"
+			   PROGRAM_LANGUAGE="SBL"
+			   SCRIPT="Function Service_PreCanInvokeMethod (MethodName As String, CanInvoke As String) As Integer
+	
+	Service_PreCanInvokeMethod = ContinueOperation
+End Function"
+			   SEQUENCE="4"
+			   UPDATED="05/09/2011 11:54:19"
+			   UPDATED_BY="YUVALY1"
+			   CREATED="08/30/2010 19:00:48"
+			   CREATED_BY="YUVALY1">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="Service_PreInvokeMethod"
+			   PROGRAM_LANGUAGE="SBL"
+			   SCRIPT="Function Service_PreInvokeMethod (MethodName As String, Inputs As PropertySet, Outputs As PropertySet) As Integer
+	Select Case Methodname
+	Case &quot;DirWrapper&quot;
+		DirWrapper Inputs, Outputs
+		Service_PreInvokeMethod = CancelOperation
+	Case &quot;KillWrapper&quot;
+		KillWrapper Inputs, Outputs
+		Service_PreInvokeMethod = CancelOperation
+	Case &quot;ActiveDirectoryData&quot; &apos;IgorV. 09.05.2011
+		ActiveDirectoryData Inputs, Outputs
+		Service_PreInvokeMethod = CancelOperation
+	Case Else
+		Service_PreInvokeMethod = ContinueOperation
+	End Select 
+End Function"
+			   SEQUENCE="5"
+			   UPDATED="05/09/2011 11:54:20"
+			   UPDATED_BY="YUVALY1"
+			   CREATED="08/30/2010 18:59:24"
+			   CREATED_BY="YUVALY1">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+		</BUSINESS_SERVICE>
+	</PROJECT>
+</REPOSITORY>
+
+
+
