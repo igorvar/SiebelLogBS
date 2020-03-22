@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   NAME="Siebel Repository"
+   UPDATED_BY="SADMIN"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   INACTIVE="N"
+	   LOCKED="N"
+	   NAME="EAI"
+	   UI_FREEZE="N"
+	   UPDATED_BY="SADMIN"
+	   CREATED_BY="SADMIN"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<BUSINESS_SERVICE
+		   CACHE="Y"
+		   CLASS="CSSService"
+		   EXTERNAL_USE="Y"
+		   HIDDEN="N"
+		   INACTIVE="N"
+		   NAME="MNR Logs BS"
+		   OBJECT_LOCKED="N"
+		   SERVER_ENABLED="N"
+		   STATE_MANAGEMENT_TYPE="Stateful"
+		   WEB_SERVICE_ENABLED="N"
+		   UPDATED_BY="SADMIN"
+		   CREATED_BY="SADMIN">
+			<BUSINESS_SERVICE_METHOD
+			   COMMENTS="Return data about current log file"
+			   HIDDEN="N"
+			   INACTIVE="Y"
+			   NAME="GetLogFileData"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Ext"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Folder"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Name"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="PrintIoXml"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Full file name for log. * for log by default"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FileName"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Function name, it write to log"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FunctionName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Name of applet, BC, BC, WF..."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ObjectName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="WF, BC, Applet..."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ObjectType"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Instance of IO"
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="SiebelMessage"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Default - false. If true, the Siebel Message Envelope will be used in the XML Hierarchy, otherwise, Siebel Message Envelope will not be included"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="UseSiebelMessageEnvelope"
+				   OPTIONAL="Y"
+				   PICK_FIELD="Value"
+				   PICKLIST="EAI Boolean Message Property PickList"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="default: UTF-16. XML character encoding to use in the output XML document.  If encoding is blank or not supported, an error will be produced"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLCharEncoding"
+				   OPTIONAL="Y"
+				   PICK_APPLET="Transcode Encoding Pick Applet"
+				   PICK_FIELD="Name"
+				   PICKLIST="XML Character Encoding PickList"
+           STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="PrintPsToLogWrapper"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="PS to print"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   COMMENTS="For Mode = ERRORS_ONLY Exequte printing to log"
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="PushLog"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FileName"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="RemoveOldLogs"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="UserName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="WriteLogRecordWrapper"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Full file name for log. * for log by default"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FileName"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Function name, it write to log"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FunctionName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="true or false"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="IsError"
+				   OPTIONAL="Y"
+				   PICK_FIELD="Value"
+				   PICKLIST="EAI Boolean Message Property PickList"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Message it will be print"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Message"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="Name of applet, BC, BC, WF..."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ObjectName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="WF, BC, Applet...."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ObjectType"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   
+				   UPDATED_BY="SADMIN"
+				   
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="true or false. If true - supress removing old logs. Actual for first printing in session"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="WithoutRemovingOldLogs"
+				   OPTIONAL="Y"
+				   PICK_FIELD="Value"
+				   PICKLIST="EAI Boolean Message Property PickList"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="SADMIN"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="(declarations)"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="/*function GetLogFileData(ops)
+{
+	ops.SetProperty(&quot;Folder&quot;, _logFile.Folder);
+	ops.SetProperty(&quot;Ext&quot;,    _logFile.Ext);
+	ops.SetProperty(&quot;Name&quot;,   _logFile.Name);
+}*/
+var _isInitialized = false;
+var _logFile = new Object;
+//var _isWriteRecordEnabled = &quot;&quot;;
+var _logingType = &quot;NO_LOGS&quot;; //NO_LOGS or ERRORS_ONLY or ALL
+var _fullLogArray ;//= null; IgorV. 12.05.12
+var MAX_LOG_BUFFER = 5000;
+//Init(); IgorV. 09.06.14. Used for calling not via PreInvokeMethod. Now creation from each function"
+			   SEQUENCE="1"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="Init"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Init(isRemoveOldLogs)
+{
+	/*
+	Igorv. Added flag isRemoveOldLogs
+	*/
+//	_isWriteRecordEnabled = TheApplication().GetProfileAttr(&quot;IsStandaloneWebClient&quot;)
+	_isInitialized = false;
+	var removeLogsOldest = &quot;&quot;;
+	var thisFunctionName = &quot;Init&quot;;
+	//var ops:PropertySet;
+	var serverName = &quot;&quot;;
+//	TheApplication().RaiseErrorText(!!&quot;FALSE&quot;);
+	if (&quot;TRUE&quot; == TheApplication().GetProfileAttr(&quot;IsStandaloneWebClient&quot;)) // for dedicated allways write log 
+	{
+		//_isWriteRecordEnabled = true;
+		_logingType = &quot;FULL_LOG&quot;; // all records;
+		_logFile.Folder = &quot;c:\\SiebelLog&quot;;
+	}
+	else 
+	{
+		_logingType = TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;LOGS_PARAMS&quot;, &quot;Mode&quot;); 
+		if (! /NO_LOGS|ERRORS_ONLY|FULL_LOG/.test(_logingType)) _logingType = &quot;NO_LOGS&quot;;
+		serverName = Clib.getenv(&quot;COMPUTERNAME&quot;);	// Get enviroment variable of server	
+		/*ops = TheApplication().NewPropertySet();
+		TheApplication().GetService(&quot;&quot; + &quot;Web Engine HTTP TXN&quot;).InvokeMethod(&quot;GetAllServerVariables&quot;, TheApplication().NewPropertySet(), ops);
+		serverName = ops.GetProperty(&quot;SERVER_NAME&quot;);
+		ops = null;*/
+
+		_logFile.Folder = TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;LOGS_PARAMS&quot;, &quot;LogFolderFor_&quot; + serverName); 
+	}	
+	_logFile.Ext = &quot;log&quot;;
+	if (_logingType == &quot;ERRORS_ONLY&quot;) _fullLogArray = new Array(); //IgorV. 12.05.11
+	var dt = ParseDate(new Date());
+	var logingName = TheApplication().LoginName();
+	_logFile.Name = logingName + &quot;_&quot; + dt.GetProperty(&quot;Year&quot;) + dt.GetProperty(&quot;Month&quot;) + dt.GetProperty(&quot;Day&quot;) + &quot;-&quot; + dt.GetProperty(&quot;Hours&quot;) + dt.GetProperty(&quot;Minutes&quot;) + dt.GetProperty(&quot;Seconds&quot;);
+	_isInitialized = true;	
+
+	if (isRemoveOldLogs) // IgorV. 09.06.14. Added condition
+	{
+		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;Run from Server: &apos;&quot; + serverName + &quot;&apos;&quot;, false); //IgorV. 12.05.11. Need to be deleted
+		removeLogsOldest = 0 + TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;LOGS_PARAMS&quot;, &quot;RemoveLogsOlderThanDays&quot;); 
+		if (removeLogsOldest &gt;= 0) RemoveOldLogs(removeLogsOldest, logingName); // if value &lt; 0 no remove logs
+	}
+	dt = null;
+	
+}"
+			   SEQUENCE="2"
+			   
+			   UPDATED_BY="SADMIN"
+			   
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="Pad0"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Pad0 (n)
+{
+
+return Clib.rsprintf(&quot;%02i&quot;, n);
+/*	if (n &lt; 10)
+		return (&quot;0&quot; + n );
+	else
+		return (&quot;&quot; + n);
+*/}"
+			   SEQUENCE="3"
+			   
+			   UPDATED_BY="SADMIN"
+			   
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="ParseDate"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function ParseDate(dt)
+{ 
+	//IgorV. 15.05.11. Canceled using function Pad0
+		var ret = TheApplication().NewPropertySet();
+		var D = Clib.rsprintf(&quot;%02i&quot;, dt.getDate());//Pad0(dt.getDate());
+		var M = Clib.rsprintf(&quot;%02i&quot;, dt.getMonth()+1);//Pad0(dt.getMonth()+1);
+		var Y = dt.getFullYear();
+		
+		var h = Clib.rsprintf(&quot;%02i&quot;,  dt.getHours());//Pad0(dt.getHours());
+		var m = Clib.rsprintf(&quot;%02i&quot;, dt.getMinutes());//Pad0(dt.getMinutes());
+		var s = Pad0(dt.getSeconds());
+		//var ms=Pad0(dt.getMilliseconds());
+		var ms = Clib.rsprintf(&quot;%03i&quot;, dt.getMilliseconds());
+
+		ret.SetProperty(&quot;Day&quot;, D);
+		ret.SetProperty(&quot;Month&quot;, M);
+		ret.SetProperty(&quot;Year&quot;,&quot;&quot; + Y);
+		ret.SetProperty(&quot;Hours&quot;, h);
+		ret.SetProperty(&quot;Minutes&quot;, m);
+		ret.SetProperty(&quot;Seconds&quot;, s);
+		ret.SetProperty(&quot;Milliseconds&quot;, &quot;&quot; + ms);
+		ret.SetProperty(&quot;TimeStamp&quot;,  D + &quot;.&quot; + M + &quot;.&quot;  + Y + &quot; &quot; +  h + &quot;:&quot; + m + &quot;:&quot; + s + &quot;.&quot; + ms); 
+	//var tmStrFmt = &quot;&quot;; Clib.strftime(tmStrFmt,&quot;%d.%m.%Y %X&quot;, dt);	// it&apos;s work
+		return ret;
+	
+}"
+			   SEQUENCE="4"
+			   
+			   UPDATED_BY="SADMIN"
+			   
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="PrintIoXml"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function PrintIoXml (Inputs:PropertySet)
+{
+	// IgorV. 19.02.20
+	/*
+	Convert inmput IO to xml and print it file.
+	SiebelMessage - instance of IO
+	UseSiebelMessageEnvelope - true / false - same as in EAI XML Converter.IntObjHierToXMLDoc 
+	XMLCharEncoding - encoding for xml
+	other parameters sane as in WriteLogRecordWrapper
+	*/
+	var thisFunctionName = &quot;PrintIoXml&quot;;
+	var ips:PropertySet;
+	var ops:PropertySet;
+	
+	//var xml;
+	
+	ops = TheApplication().NewPropertySet();
+	ips = TheApplication().NewPropertySet();
+	try
+	{
+		for(var i = 0; i &lt; Inputs.GetChildCount(); i++)
+			if (Inputs.GetChild(i).GetType() == &quot;SiebelMessage&quot;)
+			{
+				ips.AddChild(Inputs.GetChild(i));
+				break;
+			}
+		ips.SetProperty(&quot;Tags on Separate Lines&quot;, &quot;false&quot;);
+		ips.SetProperty(&quot;UseSiebelMessageEnvelope&quot;, Inputs.GetProperty(&quot;UseSiebelMessageEnvelope&quot;) == &quot;true&quot;);
+		ips.SetProperty(&quot;XMLCharEncoding&quot;, Inputs.GetProperty(&quot;XMLCharEncoding&quot;) == &quot;&quot; ? &quot;UTF-16&quot;: Inputs.GetProperty(&quot;XMLCharEncoding&quot;));
+
+		TheApplication().GetService(&quot;&quot; + &quot;EAI XML Converter&quot;).InvokeMethod(&quot;IntObjHierToXMLDoc&quot;, ips, ops);
+	}
+	catch (e)
+	{
+		//WriteLogRecord(
+		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, e.toString(), true);
+		return;
+	}
+	
+	ips.Reset();
+	if (ips.PropertyExists(&quot;FileName&quot;))
+		ips.SetProperty(&quot;FileName&quot;,   Inputs.GetProperty(&quot;FileName&quot;));
+	ips.SetProperty(&quot;ObjectType&quot;, Inputs.GetProperty(&quot;ObjectType&quot;));
+	ips.SetProperty(&quot;ObjectName&quot;, Inputs.GetProperty(&quot;ObjectName&quot;)); 
+	ips.SetProperty(&quot;FunctionName&quot;, Inputs.GetProperty(&quot;FunctionName&quot;));
+	ips.SetProperty(&quot;Message&quot;, ops.GetValue());
+	ips.SetProperty(&quot;IsError&quot;, &quot;false&quot;);
+	
+	WriteLogRecordWrapper(ips, ops);
+
+	ips = ops = null;
+}"
+			   SEQUENCE="5"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="PrintPsToLog"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function PrintPsToLog(ps, prefix)
+{
+// PLEASE DO NOT RECIVE PREFIX.
+// output to log property set with properties and children in next format:
+/*
+PropertySet: Type: &apos;&lt;type of ps&gt;&apos; Value: &apos;&lt;value of ps&gt;&apos; PropertyCount: &lt;count of rroperties&gt; ChildCount: &lt;Count of chields&gt;
+&lt;name of property&gt; = &lt;value of property&gt;
+.......................................
+&lt;name of property&gt; = &lt;value of property&gt;
+if presents childs, for each chield
+  CHILD
+  PropertySet: Type: &apos;&lt;type of ps&gt;&apos; Value: &apos;&lt;value of ps&gt;&apos; PropertyCount: &lt;count of rroperties&gt; ChildCount: &lt;Count of chields&gt;
+  &lt;name of property&gt; = &lt;value of property&gt;
+  .......................................
+  &lt;name of property&gt; = &lt;value of property&gt;
+*/
+
+ 
+	var thisFunctionName = &apos;PrintPsToLog&apos;;
+	if(arguments.length == 1 || typeof prefix == &apos;object&apos;) prefix = &quot;&quot;;
+	
+	var cntr = 0;
+	var prop =&apos;&apos;;
+	try
+	{
+		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, prefix + &quot;PropertySet: Type: &apos;&quot;+ ps.GetType() + &quot;&apos; Value: &apos;&quot; + ps.GetValue() +&quot;&apos; PropertyCount: &quot;+ps.GetPropertyCount() + &quot; ChildCount: &quot; + ps.GetChildCount(), false);
+		for (cntr; cntr &lt; ps.GetPropertyCount(); cntr++)
+		{
+			if (cntr == 0) 
+				prop = ps.GetFirstProperty();
+			else 
+				prop = ps.GetNextProperty();
+			prop += &quot; = &quot; + ps.GetProperty(prop);
+			WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, prefix + prop, false);
+		}	
+	
+		for (cntr = 0; cntr &lt; ps.GetChildCount(); cntr++)
+		{
+			WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, prefix + &quot;CHILD&quot;, false);
+			PrintPsToLog(ps.GetChild(cntr), prefix + &quot;  &quot;);
+		}
+		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, prefix + &quot;End PS&quot;, false)
+	}
+	catch(e)
+	{
+		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, e.toString(), true);
+	}
+}"
+			   SEQUENCE="6"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="PrintPsToLogWrapper"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function PrintPsToLogWrapper(ips)
+{
+	PrintPsToLog(ips.GetChild(0), null);
+}"
+			   SEQUENCE="7"
+			   
+			   UPDATED_BY="SADMIN"
+			   
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="PushLog"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function PushLog(ips)
+{
+	var ips = TheApplication().NewPropertySet();
+	var str = &quot;&quot;;
+	var fileName = &quot;&quot;;
+	var fp = null;
+	var thisFunctionName = &quot;PushLog&quot;;
+	try
+	{
+		if (_isInitialized == false) Init(true) ; // IgorV. 06.09.14. For calling not via PreInvokeMethod
+		if (_logingType != &quot;ERRORS_ONLY&quot;) return;
+		str = _fullLogArray.join(&quot;&quot;);
+		_fullLogArray = new Array();
+		if (ips.PropertyExists(&quot;FileName&quot;)) 
+			fileName = ips.GetProperty(&quot;FileName&quot;)
+		else
+			fileName = _logFile.Name + &quot;.&quot; + _logFile.Ext;
+		fileName = _logFile.Folder + &quot;\\&quot; + fileName;
+		fp = Clib.fopen(fileName, &quot;au&quot;);
+		if (null == fp) TheApplication().RaiseError(&quot;File &quot; + fileName + &quot; is not open&quot;)
+		Clib.fputs(str, fp);
+		//Clib.fflush(fp);
+		Clib.fclose(fp);
+	}
+	catch (e)
+	{
+		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, e.errCode + &quot;. &quot; + e.message, true);
+	}
+	finally
+	{
+		fp = null;
+		
+		/*	Added at 20.05.2012
+			Added by : Abed
+			Reaseon: free Memory
+			Changes:
+				ips = null;
+		*/
+		ips = null;
+	}
+}"
+			   SEQUENCE="8"
+			   
+			   UPDATED_BY="SADMIN"
+			   
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="RemoveOldLogs"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function RemoveOldLogs(maximumAge, userName)
+{
+	var thisFunctionName = &quot;RemoveOldLogs&quot;;
+	var bs = null;
+	var fileName = &quot;&quot;;
+	var re = null; // RegularExpression
+	var logDate = 0; // Date of log in format YYYYMMDD
+	var createdBefore = 0; // Date, before it logs will be removed
+	var dt = null;
+	var ips = null;
+	var ops = null;
+	var removed = 0; // counter of removed files
+	var fileIndex = 1; // IgorV. 27.02.11
+	try
+	{
+		if (_isInitialized == false) Init(false); // IgorV. 06.09.14. For calling not via PreInvokeMethod
+		ips = TheApplication().NewPropertySet();
+		ops = TheApplication().NewPropertySet();
+		//file name     Login_YYYYMMDD-HHMMSS.log 
+		re = new RegExp(&quot;\\w*_(\\d{8})-\\w*\\.&quot; + _logFile.Ext , &quot;i&quot;); // \w*_(\d{8})-\w*.log
+		bs = TheApplication().GetService(&quot;MNR Basic function wrapper BS&quot;);
+		dt = new Date();
+		dt = new Date(dt.getFullYear(), dt.getMonth(), dt.getDate() - maximumAge);
+		dt = ParseDate(dt);
+		createdBefore = ToInteger(dt.GetProperty(&quot;Year&quot;) + dt.GetProperty(&quot;Month&quot;) + dt.GetProperty(&quot;Day&quot;));
+		if (userName == &quot;&quot; || userName == null) 
+			fileName = _logFile.Folder + &quot;\\&quot; + &quot;*.&quot; + _logFile.Ext;
+		else
+			fileName = _logFile.Folder + &quot;\\&quot; + userName + &quot;_*.&quot; + _logFile.Ext;
+		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;Removing logs created before &quot; + createdBefore + &quot;. Mask: &quot; + fileName, false);
+	
+		ips.SetProperty(&quot;Pathname&quot;, fileName);
+		ips.SetProperty(&quot;Attributes&quot;, &quot;0&quot;);
+		bs.InvokeMethod(&quot;DirWrapper&quot;, ips, ops);
+	 
+		//fileName = ops.GetFirstProperty(); IgorV. 27.02.11
+		//while(fileName != &quot;&quot;)
+		while(ops.PropertyExists(fileIndex))
+		{
+			fileName = ops.GetProperty(fileIndex);
+			if (re.test(fileName))
+			{
+				logDate = ToInteger(re.exec(fileName)[1]);
+				if (logDate &lt; createdBefore)
+					//Clib.remove Returns 0 if successful; otherwise, -1.
+					removed += 1 + Clib.remove(_logFile.Folder + &quot;\\&quot; + fileName);
+			}
+			//fileName = ops.GetNextProperty();
+			fileIndex++;
+		}
+	}
+	catch(e)
+	{
+		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, e.toString(), true);
+	}
+	finally
+	{
+//		bs = dt = ips = ops = null;
+		ops = ips = dt = re = bs = null;
+		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;Removed &quot; + removed + &quot; files&quot;, false);
+	}
+}"
+			   SEQUENCE="9"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="RemoveOldLogsWrapper"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function RemoveOldLogsWrapper(Inputs)
+{
+	var removeLogsOldest = 0;
+	var thisFunctionName = &quot;RemoveOldLogsWrapper&quot;;
+	try
+	{
+		//removeLogsOldest = 0 + TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;LOGING_PARAMS&quot;, &quot;RemoveLogsOlderThanDays&quot;); 
+		removeLogsOldest = Number(TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;LOGING_PARAMS&quot;, &quot;RemoveLogsOlderThanDays&quot;)); //IgorV. 03.08.14
+		if (removeLogsOldest &gt;= 0)
+			RemoveOldLogs(removeLogsOldest, Inputs.GetProperty(&quot;UserName&quot;)); // if value &lt; 0 no remove logs
+		else
+			WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, 
+			&quot;Value of LOGING_PARAMS, RemoveLogsOlderThanDays is &quot; + TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;LOGING_PARAMS&quot;, &quot;RemoveLogsOlderThanDays&quot;) + &quot;. Logs will not be removed&quot;
+			, true);
+	}
+	catch (e)
+	{
+		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, e.message, true);
+		TheApplication().RaiseErrorText(e.message);
+	}
+		
+}"
+			   SEQUENCE="10"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="Service_PreCanInvokeMethod"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Service_PreCanInvokeMethod (MethodName, &amp;CanInvoke)
+{
+	return (ContinueOperation);
+}"
+			   SEQUENCE="14"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="Service_PreInvokeMethod"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Service_PreInvokeMethod (MethodName, Inputs, Outputs)
+{
+	if (_isInitialized == false &amp;&amp; MethodName != &quot;Init&quot;) 
+	{
+		//IgorV. 09.06.14. Added reference to property it suppress removing old logs for 
+		//accseleration works some proceses (inbound web services)
+		Init(Inputs.GetProperty(&quot;WithoutRemovingOldLogs&quot;) != &quot;true&quot;);
+	}
+	switch (MethodName)
+	{
+		case &quot;Init&quot;:
+			Init(true);
+			break;
+		case &quot;WriteLogRecordWrapper&quot;:
+			WriteLogRecordWrapper(Inputs, Outputs);
+			break;
+		case &quot;PrintPsToLogWrapper&quot;:
+			PrintPsToLogWrapper(Inputs);//, Outputs);
+			break;
+/*		case &quot;GetLogFileData&quot;:
+			GetLogFileData(Outputs);
+			break;*/
+		case &quot;PushLog&quot;:
+			PushLog(Inputs);
+			break;
+		case &quot;RemoveOldLogs&quot;:
+			RemoveOldLogsWrapper(Inputs);
+			break;
+		case &quot;PrintIoXml&quot;:
+			PrintIoXml(Inputs);
+			break;
+		default:
+			return (ContinueOperation);
+	}
+	return (CancelOperation);
+}"
+			   SEQUENCE="15"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="WriteLogRecord"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function WriteLogRecord(ObjectType, ObjectName, FunctionName, Message, isError)
+{
+/*
+	IgorV. 01.09.11. in catch added printing to file 0_WriteLogRecord.log
+*/
+	var fp = null;
+	var msgType = &quot;&quot;;
+	var fileName = &quot;&quot;;
+	var str = &quot;&quot;;
+	try
+	{
+		if (_isInitialized == false) Init(true) ; // IgorV. 06.09.14. For calling not via PreInvokeMethod
+		if (_logingType == &quot;NO_LOGS&quot;) return;
+		//msgType = isError ? &quot;ERR**&quot; : &quot;Info&quot;; IgorV. 14.07.14. Canceled. No work properly, if typeof(isError) == object
+		msgType = (isError == true) ? &quot;ERR**&quot; : &quot;Info&quot;; //IgorV. 14.07.14. Added.
+		
+		
+		str = this.ParseDate(new Date()).GetProperty(&quot;TimeStamp&quot;) + &quot;\t&quot; + msgType + &quot;\t&quot; + ObjectType + &quot;\t&quot; + ObjectName + &quot;\t&quot; + FunctionName + &quot;\t&quot; + Message + &quot;\n&quot;;
+		if (_logingType == &quot;ERRORS_ONLY&quot;)
+		{
+			if (_fullLogArray.length &gt;= MAX_LOG_BUFFER) _fullLogArray.shift();
+			_fullLogArray[_fullLogArray.length] = str;
+			if (isError) 
+			{
+				str = _fullLogArray.join(&quot;&quot;);
+				_fullLogArray = new Array();
+			}
+			else 
+				return;
+		}
+		
+		fileName = _logFile.Folder + &quot;\\&quot; + _logFile.Name + &quot;.&quot; + _logFile.Ext;
+		fp = Clib.fopen(fileName, &quot;au&quot;);
+		if (null == fp) 
+			TheApplication().RaiseErrorText(&quot;File &quot; + fileName + &quot; is not open. (Code: &quot; + Clib.errno + &quot;. Description: &quot; + Clib.perror(Clib.errno) + &quot;)&quot;);
+		Clib.fputs(str, fp);
+		//Clib.fflush(fp);
+		Clib.fclose(fp);
+
+	}
+	catch (e)
+	{
+		var folder = &quot;&quot;;
+		if (_logFile != null &amp;&amp; typeof _logFile.Folder != &quot;undefined&quot; &amp;&amp; _logFile.Folder!= &quot;&quot;)
+			folder = _logFile.Folder;
+		else 
+			folder = &quot;\\\\sbappt007\\sba81\\siebLog&quot;;
+
+		var msg = &quot;[&quot; + (new Date()) + &quot;]\t_isInitialized = &quot; + _isInitialized + &quot;\n&quot; + 
+		&quot;_logFile.Folder: [&quot; + _logFile.Folder + &quot;]\n&quot; +
+		&quot;_logFile.Name: [&quot; + _logFile.Name + &quot;]\n&quot; + 
+		&quot;UserName: [&quot; + TheApplication().LoginName() + &quot;]\n&quot; +
+		&quot;Log info: \n&quot; + 
+			&quot;\tWriter: [&quot; + ObjectType + &quot; &quot; + &quot; &quot; + ObjectName + &quot;, &quot; + FunctionName + &quot;]\n&quot; + 
+			&quot;\tMessage: [&quot; + Message + &quot;]\n&quot; +
+		&quot;Error message: [&quot; + e.message + &quot;]\n---------------------------------------------\n&quot;;
+
+		var fpErr = Clib.fopen(folder + &quot;\\0_WriteLogRecord.log&quot;, &quot;au&quot;);
+		Clib.fputs(msg, fpErr);
+		Clib.fclose(fpErr);
+		fpErr = null;
+//		TheApplication().RaiseErrorText(msg);
+//		throw e
+	}
+	finally
+	{
+		fp = null;
+	}
+
+}"
+			   SEQUENCE="11"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="WriteLogRecordToFile"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function WriteLogRecordToFile(FileName, ObjectType, ObjectName, FunctionName, Message, isError)
+{
+//var WshShell = COMCreateObject(&quot;WScript.Shell&quot;);
+//WshShell.Popup(msgType);
+// IgorV. 12.05.10. 
+//	IgorV. 01.09.11. in catch added printing to file 0_WriteLogRecordToFile.log
+	var msgType = &quot;&quot;;
+	var str = &quot;&quot;;
+	var fp = null;
+	var fileName = &quot;&quot;;
+	try
+	{
+		if (_isInitialized == false) Init(true) ; // IgorV. 06.09.14. For calling not via PreInvokeMethod
+		//NO_LOGS|ERRORS_ONLY|FULL_LOG
+		if (_logingType == &quot;NO_LOGS&quot;) return;
+	
+		//msgType = isError ? &quot;ERR**&quot; : &quot;Info&quot;; IgorV. 14.07.14. Canceled. No work properly, if typeof(isError) == object
+		msgType = (isError == true) ? &quot;ERR**&quot; : &quot;Info&quot;; //IgorV. 14.07.14. Added.
+		fileName = _logFile.Folder + &quot;\\&quot; + FileName;
+		str = this.ParseDate(new Date()).GetProperty(&quot;TimeStamp&quot;) + &quot;\t&quot; + msgType + &quot;\t&quot; + ObjectType + &quot;\t&quot; + ObjectName + &quot;\t&quot; + FunctionName + &quot;\t&quot; + Message + &quot;\n&quot;;
+		fp = Clib.fopen(fileName, &quot;au&quot;);
+		//if (null == fp) TheApplication().RaiseErrorText(&quot;File &quot; + FileName + &quot; is not open&quot;)
+		if (null == fp)
+			TheApplication().RaiseErrorText(&quot;File &quot; + fileName + &quot; is not open (Code: &quot; + Clib.errno + &quot;. Description: &quot; + Clib.perror(Clib.errno) + &quot;)&quot;);
+		Clib.fputs(str, fp);
+//Clib.fflush(fp);
+		Clib.fclose(fp);
+	}
+	catch (e)
+	{
+		var folder = &quot;&quot;;
+		if (_logFile != null &amp;&amp; typeof _logFile.Folder != &quot;undefined&quot; &amp;&amp; _logFile.Folder!= &quot;&quot;)
+			folder = _logFile.Folder;
+		else 
+			folder = &quot;\\\\sbappt007\\sba81\\siebLog&quot;;
+
+		var msg = &quot;[&quot; + (new Date()) + &quot;]\t_isInitialized = &quot; + _isInitialized + &quot;\n&quot; + 
+		&quot;_logFile.Folder = &quot; + _logFile.Folder + &quot;\n&quot; +
+		&quot;Error write to file &quot; + FileName + &quot;\n&quot; + 
+		&quot;Log info: \n&quot; + 
+			&quot;\tWriter: &quot; + ObjectType + &quot; &quot; + &quot; &quot; + ObjectName + &quot;, &quot; + FunctionName + &quot;\n&quot; + 
+			&quot;\tMessage: &quot; + Message + &quot;\n&quot; +
+		&quot;Error message: &quot; + e.message + &quot;\n---------------------------------------------\n&quot;;
+
+		var fpErr = Clib.fopen(folder + &quot;\\0_WriteLogRecordToFile.log&quot;, &quot;au&quot;);
+		Clib.fputs(msg, fpErr);
+		Clib.fclose(fpErr);
+		fpErr = null;
+//		TheApplication().RaiseErrorText(msg);
+	}
+	finally
+	{
+		fp = null;
+	}
+
+}"
+			   SEQUENCE="12"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="WriteLogRecordWrapper"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function WriteLogRecordWrapper(ips, ops)
+{
+	if (ips.PropertyExists(&quot;FileName&quot;) &amp;&amp; ips.GetProperty(&quot;FileName&quot;) != &quot;*&quot; ) //IgorV. 15.08.12 Added relation to * for WF
+		WriteLogRecordToFile(
+			ips.GetProperty(&quot;FileName&quot;), 
+			ips.GetProperty(&quot;ObjectType&quot;), 
+			ips.GetProperty(&quot;ObjectName&quot;), 
+			ips.GetProperty(&quot;FunctionName&quot;), 
+			ips.GetProperty(&quot;Message&quot;),
+			Clib.strlwr(ips.GetProperty(&quot;IsError&quot;)) == ToString(true) //IgorV. 29.11.10 For runnin from browser script (it return True/False)
+			);
+	else
+		WriteLogRecord(
+			ips.GetProperty(&quot;ObjectType&quot;), 
+			ips.GetProperty(&quot;ObjectName&quot;), 
+			ips.GetProperty(&quot;FunctionName&quot;), 
+			ips.GetProperty(&quot;Message&quot;),
+			Clib.strlwr(ips.GetProperty(&quot;IsError&quot;)) == ToString(true) //IgorV. 29.11.10 For runnin from browser script (it return True/False)
+			);
+}"
+			   SEQUENCE="13"
+			   UPDATED_BY="SADMIN"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+		</BUSINESS_SERVICE>
+	</PROJECT>
+</REPOSITORY>
