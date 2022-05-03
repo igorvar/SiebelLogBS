@@ -10,10 +10,10 @@
 	   ALLOW_OBJECT_LOCKING="Y"
 	   INACTIVE="N"
 	   LOCKED="N"
-	   NAME="Menora General Development"
+	   NAME="VIF General Development"
 	   UI_FREEZE="N"
 	   UPDATED="01/01/2000 00:00:00"
-	   UPDATED_BY="VIF"
+	   UPDATED_BY="ROMANT"
 	   CREATED="01/01/2000 00:00:00"
 	   CREATED_BY="VIF"
 	   FIO_PLACEHOLDER_FIO="TRUE">
@@ -23,7 +23,7 @@
 		   EXTERNAL_USE="Y"
 		   HIDDEN="N"
 		   INACTIVE="N"
-		   NAME="VIF Logs BS"
+		   NAME="MNR Logs BS"
 		   OBJECT_LOCKED="N"
 		   SERVER_ENABLED="N"
 		   STATE_MANAGEMENT_TYPE="Stateful"
@@ -311,6 +311,95 @@
 				</BUSINESS_SERVICE_METHOD_ARG>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_METHOD
+			   COMMENTS="Return Task Id for search system log"
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="SessionTaskId"
+			   UPDATED="01/01/2000 00:00:00"
+			   UPDATED_BY="VIF"
+			   CREATED="01/01/2000 00:00:00"
+			   CREATED_BY="VIF">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Number"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="O/S Proc Id"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED="01/01/2000 00:00:00"
+				   UPDATED_BY="VIF"
+				   CREATED="01/01/2000 00:00:00"
+				   CREATED_BY="VIF">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Server"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED="01/01/2000 00:00:00"
+				   UPDATED_BY="VIF"
+				   CREATED="01/01/2000 00:00:00"
+				   CREATED_BY="VIF">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Number"
+				   HIDDEN="N"
+				   INACTIVE="Y"
+				   NAME="TaskId"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="01/01/2000 00:00:00"
+				   UPDATED_BY="VIF"
+				   CREATED="01/01/2000 00:00:00"
+				   CREATED_BY="VIF">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="TasksList"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="01/01/2000 00:00:00"
+				   UPDATED_BY="VIF"
+				   CREATED="01/01/2000 00:00:00"
+				   CREATED_BY="VIF">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Number"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Thread Id"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED="01/01/2000 00:00:00"
+				   UPDATED_BY="VIF"
+				   CREATED="01/01/2000 00:00:00"
+				   CREATED_BY="VIF">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="IgorV. 17.04.22.The username in the current session does not always match the name in the database."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="Y"
+				   NAME="User Login"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED="01/01/2000 00:00:00"
+				   UPDATED_BY="VIF"
+				   CREATED="01/01/2000 00:00:00"
+				   CREATED_BY="VIF">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
 			   HIDDEN="N"
 			   INACTIVE="N"
 			   NAME="WriteLogRecordWrapper"
@@ -521,7 +610,17 @@ var MAX_LOG_BUFFER = 500;
 			
 		_isInitialized = true;	
 		//WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;logFile = &quot; +  logFileName.match(/^(.*)\.([^.]*)$/), false);
-		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;Run from Server: &apos;&quot; + serverName + &quot;&apos;&quot;, false); //IgorV. 12.05.11. Need to be deleted
+		//WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;Run from Server: &apos;&quot; + serverName + &quot;&apos;&quot;, false); //IgorV. 12.05.11. Need to be deleted
+		//IgorV. 28.03.22. Added printing data about Windows process. For search log use SQL:
+		/*
+		select SRVR_HOST_NAME, SRVR_TASK_ID_VAL, SRVR_START_TS from S_SRM_TASK_HIST t 
+		where SRVR_PROC_ID_VAL  = 11180 --O/S Proc Id
+		  and SRVR_THREAD_ID_VAL = 9796 --Thread Id
+		order by SRVR_START_TS desc
+		*/
+		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;Run from Server: &apos;&quot; + serverName + &quot;&apos;&quot; + 
+															&quot;; O/S Proc Id = &quot; + eval(&apos;SElib.dynamicLink(&quot;kernel32.dll&quot;, &quot;GetCurrentProcessId&quot;, STDCALL)&apos;) + 
+															&quot;; Thread Id = &quot; + eval(&apos;SElib.dynamicLink(&quot;kernel32.dll&quot;, &quot;GetCurrentThreadId&quot;, STDCALL)&apos;), false);
 		
 		if (isRemoveOldLogs) // IgorV. 09.06.14. Added condition
 		{
@@ -817,6 +916,13 @@ if presents childs, for each chield
 	finally
 	{
 		fp = null;
+		
+		/*	Added at 20.05.2012
+			Added by : Abed
+			Reaseon: free Memory
+			Changes:
+				ips = null;
+		*/
 		ips = null;
 	}
 }"
@@ -941,7 +1047,7 @@ if presents childs, for each chield
 {
 	return (ContinueOperation);
 }"
-			   SEQUENCE="16"
+			   SEQUENCE="17"
 			   UPDATED="01/01/2000 00:00:00"
 			   UPDATED_BY="VIF"
 			   CREATED="01/01/2000 00:00:00"
@@ -992,12 +1098,87 @@ if presents childs, for each chield
 		case &quot;PrintEventActionInputPS&quot;: //IgorV. 20.05.20 Added for print input of action of runtime events
 			PrintEventActionInputPS(Inputs);
 			break;
+		case &quot;SessionTaskId&quot;: //IgorV. 12.04.22
+			SessionTaskId(Inputs, Outputs);
+			break;
 		default:
 			return (ContinueOperation);
 	}
 	return (CancelOperation);
 }"
-			   SEQUENCE="17"
+			   SEQUENCE="18"
+			   UPDATED="01/01/2000 00:00:00"
+			   UPDATED_BY="VIF"
+			   CREATED="01/01/2000 00:00:00"
+			   CREATED_BY="VIF">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="SessionTaskId"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function SessionTaskId(I:PropertySet, O:PropertySet)
+{
+// IgorV. 12.04.22
+/* return property set TasksList
+PropertySet: Type: &apos;TasksList&apos; Value: &apos;&apos; PropertyCount: 0 ChildCount: 3
+CHILD
+  PropertySet: Type: &apos;12/31/2022 05:00:01&apos; Value: &apos;15728720&apos; PropertyCount: 0 ChildCount: 0
+  End PS
+CHILD
+  PropertySet: Type: &apos;12/31/2022 01:00:03&apos; Value: &apos;15728700&apos; PropertyCount: 0 ChildCount: 0
+  End PS
+CHILD
+  PropertySet: Type: &apos;12/31/2022 20:40:32&apos; Value: &apos;15728681&apos; PropertyCount: 0 ChildCount: 0
+  End PS
+End PS
+*/
+	try
+	{
+		var bc:BusComp = null; 
+		var ops:PropertySet;
+		bc = TheApplication().GetBusObject(&quot;Server Admin Runtime&quot;).GetBusComp(&quot;Enterprise Task Persistence&quot;);
+		bc.ClearToQuery();
+		bc.SetSearchSpec(&quot;O/S Proc Id&quot;, I.GetProperty(&quot;O/S Proc Id&quot;));
+		bc.SetSearchSpec(&quot;Thread Id&quot;, I.GetProperty(&quot;Thread Id&quot;));
+		//bc.SetSearchSpec(&quot;User Login&quot;, &quot;~ = &apos;&quot; + I.GetProperty(&quot;User Login&quot;) + &quot;&apos;&quot;);
+		bc.SetSearchSpec(&quot;Server Host Name&quot;, &quot;~ = &apos;&quot; + I.GetProperty(&quot;Server&quot;) + &quot;&apos;&quot;);
+		bc.ActivateField(&quot;Task Id&quot;);
+		bc.ActivateField(&quot;Task Start Time&quot;);
+		bc.SetSortSpec(&quot;Task Start Time(DESCENDING)&quot;);
+		bc.ExecuteQuery(ForwardOnly);
+	
+		ops = TheApplication().NewPropertySet();
+		ops.SetType(&quot;TasksList&quot;);
+	
+		//WriteToLog(&quot;SearchExpr = &quot; + bc.GetSearchExpr(), false);
+	
+		if (!bc.FirstRecord()) return;
+		do
+		{
+			ops.AddChild(TheApplication().NewPropertySet());
+			ops.GetChild(ops.GetChildCount() - 1).SetType(bc.GetFieldValue(&quot;Task Start Time&quot;));
+			ops.GetChild(ops.GetChildCount() - 1).SetValue(bc.GetFieldValue(&quot;Task Id&quot;));
+	
+		}while (bc.NextRecord())
+	
+		O.AddChild(ops.Copy());
+		
+		ops = null;
+		bc = null;
+	}
+	catch(e)
+	{
+		WriteToLog(e.message, true)
+	}
+	finally
+	{
+		bc = null;
+		ops = null;
+	}
+
+	function WriteToLog(Message, IsError){WriteLogRecord(&quot;BS&quot;, this.Name(), &quot;SessionTaskId&quot;, Message, IsError);}
+}"
+			   SEQUENCE="13"
 			   UPDATED="01/01/2000 00:00:00"
 			   UPDATED_BY="VIF"
 			   CREATED="01/01/2000 00:00:00"
@@ -1077,7 +1258,7 @@ if presents childs, for each chield
 	}
 
 }"
-			   SEQUENCE="13"
+			   SEQUENCE="14"
 			   UPDATED="01/01/2000 00:00:00"
 			   UPDATED_BY="VIF"
 			   CREATED="01/01/2000 00:00:00"
@@ -1143,7 +1324,7 @@ if presents childs, for each chield
 	}
 
 }"
-			   SEQUENCE="14"
+			   SEQUENCE="15"
 			   UPDATED="01/01/2000 00:00:00"
 			   UPDATED_BY="VIF"
 			   CREATED="01/01/2000 00:00:00"
@@ -1162,7 +1343,7 @@ if presents childs, for each chield
 			ips.GetProperty(&quot;ObjectName&quot;), 
 			ips.GetProperty(&quot;FunctionName&quot;), 
 			ips.GetProperty(&quot;Message&quot;),
-			Clib.strlwr(ips.GetProperty(&quot;IsError&quot;)) == ToString(true) //IgorV. 29.11.10 For runnin from browser script (it return True/False)
+			Clib.strlwr(ips.GetProperty(&quot;IsError&quot;)) == ToString(true) //IgorV. 29.11.10 For running from browser script (it return True/False)
 			);
 	else
 		WriteLogRecord(
@@ -1170,10 +1351,10 @@ if presents childs, for each chield
 			ips.GetProperty(&quot;ObjectName&quot;), 
 			ips.GetProperty(&quot;FunctionName&quot;), 
 			ips.GetProperty(&quot;Message&quot;),
-			Clib.strlwr(ips.GetProperty(&quot;IsError&quot;)) == ToString(true) //IgorV. 29.11.10 For runnin from browser script (it return True/False)
+			Clib.strlwr(ips.GetProperty(&quot;IsError&quot;)) == ToString(true) //IgorV. 29.11.10 For running from browser script (it return True/False)
 			);
 }"
-			   SEQUENCE="15"
+			   SEQUENCE="16"
 			   UPDATED="01/01/2000 00:00:00"
 			   UPDATED_BY="VIF"
 			   CREATED="01/01/2000 00:00:00"
