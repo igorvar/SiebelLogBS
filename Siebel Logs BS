@@ -1,560 +1,477 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>UPDATED_BY
 <REPOSITORY
-   NAME="Siebel Repository"
-   UPDATED="01/01/2000 00:00:00"
-   UPDATED_BY="VIF"
-   CREATED="01/01/2000 00:00:00"
-   CREATED_BY="VIF"
-   FIO_PLACEHOLDER_FIO="TRUE">
+   NAME="Siebel Repository"
+   UPDATED_BY="VIF"
+   CREATED_BY="VIF"
+   FIO_PLACEHOLDER_FIO="TRUE">
 	<PROJECT
-	   ALLOW_OBJECT_LOCKING="Y"
-	   INACTIVE="N"
-	   LOCKED="N"
-	   NAME="VIF General Development"
-	   UI_FREEZE="N"
-	   UPDATED="01/01/2000 00:00:00"
-	   UPDATED_BY="ROMANT"
-	   CREATED="01/01/2000 00:00:00"
-	   CREATED_BY="VIF"
-	   FIO_PLACEHOLDER_FIO="TRUE">
+	   ALLOW_OBJECT_LOCKING="Y"
+	   INACTIVE="N"
+	   LANGUAGE_LOCKED="HEB"
+	   LOCKED="Y"
+	   NAME="Symbolic Strings"
+	   UI_FREEZE="N"
+	   UPDATED_BY="VIF"
+	   CREATED_BY="VIF"
+	   FIO_PLACEHOLDER_FIO="TRUE">
 		<BUSINESS_SERVICE
-		   CACHE="Y"
-		   CLASS="CSSService"
-		   EXTERNAL_USE="Y"
-		   HIDDEN="N"
-		   INACTIVE="N"
-		   NAME="MNR Logs BS"
-		   OBJECT_LOCKED="N"
-		   SERVER_ENABLED="N"
-		   STATE_MANAGEMENT_TYPE="Stateful"
-		   WEB_SERVICE_ENABLED="N"
-		   UPDATED="01/01/2000 00:00:00"
-		   UPDATED_BY="VIF"
-		   CREATED="01/01/2000 00:00:00"
-		   CREATED_BY="VIF">
+		   CACHE="Y"
+		   CLASS="CSSService"
+		   EXTERNAL_USE="Y"
+		   HIDDEN="N"
+		   INACTIVE="N"
+		   NAME="VIF Logs BS"
+		   OBJECT_LOCKED="N"
+		   SERVER_ENABLED="N"
+		   STATE_MANAGEMENT_TYPE="Stateful"
+		   WEB_SERVICE_ENABLED="N"
+		   UPDATED_BY="VIF"
+		   CREATED_BY="VIF">
 			<BUSINESS_SERVICE_METHOD
-			   COMMENTS="Return data about current log file"
-			   HIDDEN="N"
-			   INACTIVE="N"
-			   NAME="GetLogFileData"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   COMMENTS="Return data about current log file"
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="GetLogFileData"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 				<BUSINESS_SERVICE_METHOD_ARG
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="Y"
-				   NAME="Ext"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Output"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="Y"
+				   NAME="Ext"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="Y"
-				   NAME="Folder"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Output"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="Y"
+				   NAME="Folder"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="FullName"
-				   OPTIONAL="Y"
-				   STORAGE_TYPE="Property"
-				   TYPE="Output"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FullName"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_METHOD
-			   COMMENTS="Actual before first printing in session. Otherwise will be ignored"
-			   HIDDEN="N"
-			   INACTIVE="N"
-			   NAME="Init"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   COMMENTS="Actual before first printing in session. Otherwise will be ignored"
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="Init"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="Name of log file for all session. * - calculated automatically"
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="FileName"
-				   OPTIONAL="Y"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="Name of log file for all session. * - calculated automatically"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FileName"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="true or false. If true - supress removing old logs. Actual for first printing in session"
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="WithoutRemovingOldLogs"
-				   OPTIONAL="Y"
-				   PICK_FIELD="Value"
-				   PICKLIST="EAI Boolean Message Property PickList"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="true or false. If true - supress removing old logs. Actual for first printing in session"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="WithoutRemovingOldLogs"
+				   OPTIONAL="Y"
+				   PICK_FIELD="Value"
+				   PICKLIST="EAI Boolean Message Property PickList"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_METHOD
-			   COMMENTS="For use from RTE actions. The Business Service Context is expected to be SiebelScript code. If there is no valid code in it, Context will be writed as a message."
-			   HIDDEN="N"
-			   INACTIVE="N"
-			   NAME="PrintEventActionInputPS"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   COMMENTS="For use from RTE actions. The Business Service Context is expected to be SiebelScript code. If there is no valid code in it, Context will be writed as a message."
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="PrintEventActionInputPS"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_METHOD
-			   HIDDEN="N"
-			   INACTIVE="N"
-			   NAME="PrintIoXml"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="PrintIoXml"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="Full file name for log. * for log by default"
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="FileName"
-				   OPTIONAL="Y"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="Full file name for log. * for log by default"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FileName"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="Function name, it write to log"
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="FunctionName"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="Function name, it write to log"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FunctionName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="Name of applet, BC, BC, WF..."
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="ObjectName"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="Name of applet, BC, BC, WF..."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ObjectName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="WF, BC, Applet..."
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="ObjectType"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="WF, BC, Applet..."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ObjectType"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="Instance of IO"
-				   DATA_TYPE="Hierarchy"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="SiebelMessage"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Hierarchy"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="Instance of IO"
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="SiebelMessage"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="Default - false. If true, the Siebel Message Envelope will be used in the XML Hierarchy, otherwise, Siebel Message Envelope will not be included"
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="UseSiebelMessageEnvelope"
-				   OPTIONAL="Y"
-				   PICK_FIELD="Value"
-				   PICKLIST="EAI Boolean Message Property PickList"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="Default - false. If true, the Siebel Message Envelope will be used in the XML Hierarchy, otherwise, Siebel Message Envelope will not be included"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="UseSiebelMessageEnvelope"
+				   OPTIONAL="Y"
+				   PICK_FIELD="Value"
+				   PICKLIST="EAI Boolean Message Property PickList"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="default: UTF-16. XML character encoding to use in the output XML document.  If encoding is blank or not supported, an error will be produced"
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="XMLCharEncoding"
-				   OPTIONAL="Y"
-				   PICK_APPLET="Transcode Encoding Pick Applet"
-				   PICK_FIELD="Name"
-				   PICKLIST="XML Character Encoding PickList"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="default: UTF-16. XML character encoding to use in the output XML document.  If encoding is blank or not supported, an error will be produced"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLCharEncoding"
+				   OPTIONAL="Y"
+				   PICK_APPLET="Transcode Encoding Pick Applet"
+				   PICK_FIELD="Name"
+				   PICKLIST="XML Character Encoding PickList"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_METHOD
-			   HIDDEN="N"
-			   INACTIVE="N"
-			   NAME="PrintPsToLogWrapper"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="PrintPsToLogWrapper"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 				<BUSINESS_SERVICE_METHOD_ARG
-				   DATA_TYPE="Hierarchy"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="PS to print"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Hierarchy"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="PS to print"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_METHOD
-			   COMMENTS="For Mode = ERRORS_ONLY Exequte printing to log"
-			   HIDDEN="N"
-			   INACTIVE="N"
-			   NAME="PushLog"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   COMMENTS="For Mode = ERRORS_ONLY Exequte printing to log"
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="PushLog"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 				<BUSINESS_SERVICE_METHOD_ARG
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="FileName"
-				   OPTIONAL="Y"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FileName"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_METHOD
-			   HIDDEN="N"
-			   INACTIVE="N"
-			   NAME="RemoveOldLogs"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="RemoveOldLogs"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 				<BUSINESS_SERVICE_METHOD_ARG
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="UserName"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="UserName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_METHOD
-			   COMMENTS="Return Task Id for search system log"
-			   HIDDEN="N"
-			   INACTIVE="N"
-			   NAME="SessionTaskId"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   COMMENTS="Return Task Id for search system log"
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="SessionTaskId"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 				<BUSINESS_SERVICE_METHOD_ARG
-				   DATA_TYPE="Number"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="O/S Proc Id"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   DATA_TYPE="Number"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="O/S Proc Id"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="Server"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Server"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   DATA_TYPE="Number"
-				   HIDDEN="N"
-				   INACTIVE="Y"
-				   NAME="TaskId"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Output"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   DATA_TYPE="Number"
+				   HIDDEN="N"
+				   INACTIVE="Y"
+				   NAME="TaskId"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   DATA_TYPE="Hierarchy"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="TasksList"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Hierarchy"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="TasksList"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   DATA_TYPE="Number"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="Thread Id"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   DATA_TYPE="Number"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Thread Id"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="IgorV. 17.04.22.The username in the current session does not always match the name in the database."
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="Y"
-				   NAME="User Login"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="IgorV. .The username in the current session does not always match the name in the database."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="Y"
+				   NAME="User Login"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_METHOD
-			   HIDDEN="N"
-			   INACTIVE="N"
-			   NAME="WriteLogRecordWrapper"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="WriteLogRecordWrapper"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="Full file name for log. * for log by default"
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="FileName"
-				   OPTIONAL="Y"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="Full file name for log. * for log by default"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FileName"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="Function name, it write to log"
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="FunctionName"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="Function name, it write to log"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="FunctionName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="true or false"
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="IsError"
-				   OPTIONAL="Y"
-				   PICK_FIELD="Value"
-				   PICKLIST="EAI Boolean Message Property PickList"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="true or false"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="IsError"
+				   OPTIONAL="Y"
+				   PICK_FIELD="Value"
+				   PICKLIST="EAI Boolean Message Property PickList"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="Message it will be print"
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="Message"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="Message it will be print"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Message"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="Name of applet, BC, BC, WF..."
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="ObjectName"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="Name of applet, BC, BC, WF..."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ObjectName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="WF, BC, Applet...."
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="N"
-				   NAME="ObjectType"
-				   OPTIONAL="N"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="WF, BC, Applet...."
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ObjectType"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 				<BUSINESS_SERVICE_METHOD_ARG
-				   COMMENTS="IgorV. 02.06.20. Inactivated. Added function Init instead of. true or false. If true - supress removing old logs. Actual for first printing in session"
-				   DATA_TYPE="String"
-				   HIDDEN="N"
-				   INACTIVE="Y"
-				   NAME="WithoutRemovingOldLogs"
-				   OPTIONAL="Y"
-				   PICK_FIELD="Value"
-				   PICKLIST="EAI Boolean Message Property PickList"
-				   STORAGE_TYPE="Property"
-				   TYPE="Input"
-				   UPDATED="01/01/2000 00:00:00"
-				   UPDATED_BY="VIF"
-				   CREATED="01/01/2000 00:00:00"
-				   CREATED_BY="VIF">
+				   COMMENTS="IgorV. . Inactivated. Added function Init instead of. true or false. If true - supress removing old logs. Actual for first printing in session"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="Y"
+				   NAME="WithoutRemovingOldLogs"
+				   OPTIONAL="Y"
+				   PICK_FIELD="Value"
+				   PICKLIST="EAI Boolean Message Property PickList"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED_BY="VIF"
+				   CREATED_BY="VIF">
 				</BUSINESS_SERVICE_METHOD_ARG>
 			</BUSINESS_SERVICE_METHOD>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="(declarations)"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="/*function GetLogFileData(ops)
+			   INACTIVE="N"
+			   NAME="(declarations)"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="/*function GetLogFileData(ops)
 {
 	ops.SetProperty(&quot;Folder&quot;, _logFile.Folder);
-	ops.SetProperty(&quot;Ext&quot;,    _logFile.Ext);
-	ops.SetProperty(&quot;Name&quot;,   _logFile.Name);
+	ops.SetProperty(&quot;Ext&quot;,    _logFile.Ext);
+	ops.SetProperty(&quot;Name&quot;,   _logFile.Name);
 }*/
 var _isInitialized = false;
 var _logFile = new Object;
 //var _isWriteRecordEnabled = &quot;&quot;;
 var _logingType = &quot;NO_LOGS&quot;; //NO_LOGS or ERRORS_ONLY or ALL
-var _fullLogArray ;//= null; IgorV. 12.05.12
+var _fullLogArray ;//= null; IgorV. 
 var MAX_LOG_BUFFER = 500;
-//Init(); IgorV. 09.06.14. Used for calling not via PreInvokeMethod. Now creation from each function"
-			   SEQUENCE="1"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+//Init(); IgorV. . Used for calling not via PreInvokeMethod. Now creation from each function"
+			   SEQUENCE="1"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="GetLogFileData"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function GetLogFileData(O:PropertySet)
+			   INACTIVE="N"
+			   NAME="GetLogFileData"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function GetLogFileData(O:PropertySet)
 {
 	O.Reset();
 	O.SetProperty(&quot;FullName&quot;, _logFile.Name + &quot;.&quot; + _logFile.Ext);
 }"
-			   SEQUENCE="2"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="2"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="Init"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function Init(isRemoveOldLogs, logFileName)
+			   INACTIVE="N"
+			   NAME="Init"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Init(isRemoveOldLogs, logFileName)
 {
-//02.06.20. Added parameter logFileName - file name for log. SADMIN_20200602-081234_suffix.log
+//Added parameter logFileName - file name for log. SADMIN_20200602-081234_suffix.log
 	/*
 	Igorv. Added flag isRemoveOldLogs
 	*/
@@ -589,7 +506,7 @@ var MAX_LOG_BUFFER = 500;
 			_logFile.Folder = TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;LOGS_PARAMS&quot;, &quot;LogFolderFor_&quot; + serverName); 
 		}	
 		
-		if (_logingType == &quot;ERRORS_ONLY&quot;) _fullLogArray = new Array(); //IgorV. 12.05.11
+		if (_logingType == &quot;ERRORS_ONLY&quot;) _fullLogArray = new Array(); //IgorV. 
 		if (logFileName == &quot;&quot; || logFileName == &quot;*&quot;)
 		{
 			var dt = ParseDate(new Date());
@@ -609,20 +526,20 @@ var MAX_LOG_BUFFER = 500;
 		
 			
 		_isInitialized = true;	
-		//WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;logFile = &quot; +  logFileName.match(/^(.*)\.([^.]*)$/), false);
-		//WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;Run from Server: &apos;&quot; + serverName + &quot;&apos;&quot;, false); //IgorV. 12.05.11. Need to be deleted
-		//IgorV. 28.03.22. Added printing data about Windows process. For search log use SQL:
+		//WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;logFile = &quot; +  logFileName.match(/^(.*)\.([^.]*)$/), false);
+		//WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;Run from Server: &apos;&quot; + serverName + &quot;&apos;&quot;, false); //IgorV. Need to be deleted
+		//IgorV. Added printing data about Windows process. For search log use SQL:
 		/*
 		select SRVR_HOST_NAME, SRVR_TASK_ID_VAL, SRVR_START_TS from S_SRM_TASK_HIST t 
-		where SRVR_PROC_ID_VAL  = 11180 --O/S Proc Id
-		  and SRVR_THREAD_ID_VAL = 9796 --Thread Id
+		where SRVR_PROC_ID_VAL  = 11180 --O/S Proc Id
+		  and SRVR_THREAD_ID_VAL = 9796 --Thread Id
 		order by SRVR_START_TS desc
 		*/
 		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;Run from Server: &apos;&quot; + serverName + &quot;&apos;&quot; + 
 															&quot;; O/S Proc Id = &quot; + eval(&apos;SElib.dynamicLink(&quot;kernel32.dll&quot;, &quot;GetCurrentProcessId&quot;, STDCALL)&apos;) + 
 															&quot;; Thread Id = &quot; + eval(&apos;SElib.dynamicLink(&quot;kernel32.dll&quot;, &quot;GetCurrentThreadId&quot;, STDCALL)&apos;), false);
 		
-		if (isRemoveOldLogs) // IgorV. 09.06.14. Added condition
+		if (isRemoveOldLogs) // IgorV. Added condition
 		{
 			removeLogsOldest = 0 + TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;LOGS_PARAMS&quot;, &quot;RemoveLogsOlderThanDays&quot;); 
 			if (removeLogsOldest &gt;= 0) RemoveOldLogs(removeLogsOldest, logingName); // if value &lt; 0 no remove logs
@@ -633,17 +550,15 @@ var MAX_LOG_BUFFER = 500;
 		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;Method run, but this BS was initialized before. isRemoveOldLogs = &quot; + isRemoveOldLogs + &quot;; logFileName = &quot; + logFileName, true); 
 
 }"
-			   SEQUENCE="3"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="3"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="Pad0"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function Pad0 (n)
+			   INACTIVE="N"
+			   NAME="Pad0"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Pad0 (n)
 {
 
 return Clib.rsprintf(&quot;%02i&quot;, n);
@@ -652,25 +567,23 @@ return Clib.rsprintf(&quot;%02i&quot;, n);
 	else
 		return (&quot;&quot; + n);
 */}"
-			   SEQUENCE="4"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="4"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="ParseDate"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function ParseDate(dt)
+			   INACTIVE="N"
+			   NAME="ParseDate"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function ParseDate(dt)
 { 
-	//IgorV. 15.05.11. Canceled using function Pad0
+	//IgorV. Canceled using function Pad0
 		var ret = TheApplication().NewPropertySet();
 		var D = Clib.rsprintf(&quot;%02i&quot;, dt.getDate());//Pad0(dt.getDate());
 		var M = Clib.rsprintf(&quot;%02i&quot;, dt.getMonth()+1);//Pad0(dt.getMonth()+1);
 		var Y = dt.getFullYear();
 		
-		var h = Clib.rsprintf(&quot;%02i&quot;,  dt.getHours());//Pad0(dt.getHours());
+		var h = Clib.rsprintf(&quot;%02i&quot;,  dt.getHours());//Pad0(dt.getHours());
 		var m = Clib.rsprintf(&quot;%02i&quot;, dt.getMinutes());//Pad0(dt.getMinutes());
 		var s = Pad0(dt.getSeconds());
 		//var ms=Pad0(dt.getMilliseconds());
@@ -683,24 +596,22 @@ return Clib.rsprintf(&quot;%02i&quot;, n);
 		ret.SetProperty(&quot;Minutes&quot;, m);
 		ret.SetProperty(&quot;Seconds&quot;, s);
 		ret.SetProperty(&quot;Milliseconds&quot;, &quot;&quot; + ms);
-		ret.SetProperty(&quot;TimeStamp&quot;,  D + &quot;.&quot; + M + &quot;.&quot;  + Y + &quot; &quot; +  h + &quot;:&quot; + m + &quot;:&quot; + s + &quot;.&quot; + ms); 
+		ret.SetProperty(&quot;TimeStamp&quot;,  D + &quot;.&quot; + M + &quot;.&quot;  + Y + &quot; &quot; +  h + &quot;:&quot; + m + &quot;:&quot; + s + &quot;.&quot; + ms); 
 	//var tmStrFmt = &quot;&quot;; Clib.strftime(tmStrFmt,&quot;%d.%m.%Y %X&quot;, dt);	// it&apos;s work
 		return ret;
 	
 }"
-			   SEQUENCE="5"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="5"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="PrintEventActionInputPS"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function PrintEventActionInputPS (Inputs: PropertySet)
+			   INACTIVE="N"
+			   NAME="PrintEventActionInputPS"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function PrintEventActionInputPS (Inputs: PropertySet)
 {
-	//IgorV. 20.05.20
+	//IgorV. 
 	var msg;
 	var objName;
 	
@@ -741,19 +652,17 @@ End PS
 
 
 }"
-			   SEQUENCE="6"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="6"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="PrintIoXml"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function PrintIoXml (Inputs:PropertySet)
+			   INACTIVE="N"
+			   NAME="PrintIoXml"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function PrintIoXml (Inputs:PropertySet)
 {
-	// IgorV. 19.02.20
+	// IgorV. 
 	/*
 	Convert inmput IO to xml and print it file.
 	SiebelMessage - instance of IO
@@ -792,7 +701,7 @@ End PS
 	
 	ips.Reset();
 	if (Inputs.PropertyExists(&quot;FileName&quot;))
-		ips.SetProperty(&quot;FileName&quot;,   Inputs.GetProperty(&quot;FileName&quot;));
+		ips.SetProperty(&quot;FileName&quot;,   Inputs.GetProperty(&quot;FileName&quot;));
 	ips.SetProperty(&quot;ObjectType&quot;, Inputs.GetProperty(&quot;ObjectType&quot;));
 	ips.SetProperty(&quot;ObjectName&quot;, Inputs.GetProperty(&quot;ObjectName&quot;)); 
 	ips.SetProperty(&quot;FunctionName&quot;, Inputs.GetProperty(&quot;FunctionName&quot;));
@@ -803,17 +712,15 @@ End PS
 
 	ips = ops = null;
 }"
-			   SEQUENCE="7"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="7"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="PrintPsToLog"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function PrintPsToLog(ps, prefix)
+			   INACTIVE="N"
+			   NAME="PrintPsToLog"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function PrintPsToLog(ps, prefix)
 {
 // PLEASE DO NOT RECIVE PREFIX.
 // output to log property set with properties and children in next format:
@@ -823,14 +730,14 @@ PropertySet: Type: &apos;&lt;type of ps&gt;&apos; Value: &apos;&lt;value of ps&g
 .......................................
 &lt;name of property&gt; = &lt;value of property&gt;
 if presents childs, for each chield
-  CHILD
-  PropertySet: Type: &apos;&lt;type of ps&gt;&apos; Value: &apos;&lt;value of ps&gt;&apos; PropertyCount: &lt;count of rroperties&gt; ChildCount: &lt;Count of chields&gt;
-  &lt;name of property&gt; = &lt;value of property&gt;
-  .......................................
-  &lt;name of property&gt; = &lt;value of property&gt;
+  CHILD
+  PropertySet: Type: &apos;&lt;type of ps&gt;&apos; Value: &apos;&lt;value of ps&gt;&apos; PropertyCount: &lt;count of rroperties&gt; ChildCount: &lt;Count of chields&gt;
+  &lt;name of property&gt; = &lt;value of property&gt;
+  .......................................
+  &lt;name of property&gt; = &lt;value of property&gt;
 */
 
- 
+ 
 	var thisFunctionName = &apos;PrintPsToLog&apos;;
 	if(arguments.length == 1 || typeof prefix == &apos;object&apos;) prefix = &quot;&quot;;
 	
@@ -852,7 +759,7 @@ if presents childs, for each chield
 		for (cntr = 0; cntr &lt; ps.GetChildCount(); cntr++)
 		{
 			WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, prefix + &quot;CHILD&quot;, false);
-			PrintPsToLog(ps.GetChild(cntr), prefix + &quot;  &quot;);
+			PrintPsToLog(ps.GetChild(cntr), prefix + &quot;  &quot;);
 		}
 		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, prefix + &quot;End PS&quot;, false)
 	}
@@ -861,31 +768,27 @@ if presents childs, for each chield
 		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, e.toString(), true);
 	}
 }"
-			   SEQUENCE="8"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="8"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="PrintPsToLogWrapper"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function PrintPsToLogWrapper(ips)
+			   INACTIVE="N"
+			   NAME="PrintPsToLogWrapper"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function PrintPsToLogWrapper(ips)
 {
 	PrintPsToLog(ips.GetChild(0), null);
 }"
-			   SEQUENCE="9"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="9"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="PushLog"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function PushLog(ips)
+			   INACTIVE="N"
+			   NAME="PushLog"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function PushLog(ips)
 {
 	var ips = TheApplication().NewPropertySet();
 	var str = &quot;&quot;;
@@ -894,7 +797,7 @@ if presents childs, for each chield
 	var thisFunctionName = &quot;PushLog&quot;;
 	try
 	{
-		if (_isInitialized == false) Init(true, &quot;&quot;) ; // IgorV. 06.09.14. For calling not via PreInvokeMethod
+		if (_isInitialized == false) Init(true, &quot;&quot;) ; // IgorV. For calling not via PreInvokeMethod
 		if (_logingType != &quot;ERRORS_ONLY&quot;) return;
 		str = _fullLogArray.join(&quot;&quot;);
 		_fullLogArray = new Array();
@@ -917,26 +820,19 @@ if presents childs, for each chield
 	{
 		fp = null;
 		
-		/*	Added at 20.05.2012
-			Added by : Abed
-			Reaseon: free Memory
-			Changes:
-				ips = null;
-		*/
+
 		ips = null;
 	}
 }"
-			   SEQUENCE="10"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="10"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="RemoveOldLogs"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function RemoveOldLogs(maximumAge, userName)
+			   INACTIVE="N"
+			   NAME="RemoveOldLogs"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function RemoveOldLogs(maximumAge, userName)
 {
 	var thisFunctionName = &quot;RemoveOldLogs&quot;;
 	var bs = null;
@@ -948,15 +844,15 @@ if presents childs, for each chield
 	var ips = null;
 	var ops = null;
 	var removed = 0; // counter of removed files
-	var fileIndex = 1; // IgorV. 27.02.11
+	var fileIndex = 1; // IgorV. 
 	try
 	{
-		if (_isInitialized == false) Init(false, &quot;&quot;); // IgorV. 06.09.14. For calling not via PreInvokeMethod
+		if (_isInitialized == false) Init(false, &quot;&quot;); // IgorV. For calling not via PreInvokeMethod
 		ips = TheApplication().NewPropertySet();
 		ops = TheApplication().NewPropertySet();
-		//file name     Login_YYYYMMDD-HHMMSS.log 
+		//file name     Login_YYYYMMDD-HHMMSS.log 
 		//re = new RegExp(&quot;\\w*_(\\d{8})-\\w*\\.&quot; + _logFile.Ext , &quot;i&quot;); // \w*_(\d{8})-\w*.log
-		// IgorV. 02.12.20:
+		// IgorV. :
 		//re = new RegExp(&quot;\\w+_(\\d{8})(?:-\\d{6})?(?:_.*)*\\.&quot; + _logFile.Ext + &quot;$&quot;, &quot;i&quot;); // \w+_(\d{8})(?:-\d{6})?(_.*)*.log$
 		re = new RegExp(&quot;\\w*_(\\d{8})-.*\\.&quot; + _logFile.Ext + &quot;$&quot;, &quot;i&quot;); // \w*_(\d{8})-\w*.log
 		bs = TheApplication().GetService(&quot;VIF Basic function wrapper BS&quot;);
@@ -974,7 +870,7 @@ if presents childs, for each chield
 		ips.SetProperty(&quot;Attributes&quot;, &quot;0&quot;);
 		bs.InvokeMethod(&quot;DirWrapper&quot;, ips, ops);
 	 
-		//fileName = ops.GetFirstProperty(); IgorV. 27.02.11
+		//fileName = ops.GetFirstProperty(); IgorV. 
 		//while(fileName != &quot;&quot;)
 		while(ops.PropertyExists(fileIndex))
 		{
@@ -1001,24 +897,22 @@ if presents childs, for each chield
 		WriteLogRecord(&quot;BS&quot;, this.Name(), thisFunctionName, &quot;Removed &quot; + removed + &quot; files&quot;, false);
 	}
 }"
-			   SEQUENCE="11"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="11"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="RemoveOldLogsWrapper"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function RemoveOldLogsWrapper(Inputs)
+			   INACTIVE="N"
+			   NAME="RemoveOldLogsWrapper"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function RemoveOldLogsWrapper(Inputs)
 {
 	var removeLogsOldest = 0;
 	var thisFunctionName = &quot;RemoveOldLogsWrapper&quot;;
 	try
 	{
 		//removeLogsOldest = 0 + TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;LOGING_PARAMS&quot;, &quot;RemoveLogsOlderThanDays&quot;); 
-		removeLogsOldest = Number(TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;LOGS_PARAMS&quot;, &quot;RemoveLogsOlderThanDays&quot;)); //IgorV. 03.08.14
+		removeLogsOldest = Number(TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;LOGS_PARAMS&quot;, &quot;RemoveLogsOlderThanDays&quot;)); //IgorV. 
 		if (removeLogsOldest &gt;= 0)
 			RemoveOldLogs(removeLogsOldest, Inputs.GetProperty(&quot;UserName&quot;)); // if value &lt; 0 no remove logs
 		else
@@ -1033,40 +927,36 @@ if presents childs, for each chield
 	}
 		
 }"
-			   SEQUENCE="12"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="12"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="Service_PreCanInvokeMethod"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function Service_PreCanInvokeMethod (MethodName, &amp;CanInvoke)
+			   INACTIVE="N"
+			   NAME="Service_PreCanInvokeMethod"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Service_PreCanInvokeMethod (MethodName, &amp;CanInvoke)
 {
 	return (ContinueOperation);
 }"
-			   SEQUENCE="17"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="16"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="Service_PreInvokeMethod"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function Service_PreInvokeMethod (MethodName, Inputs: PropertySet, Outputs:PropertySet)
+			   INACTIVE="N"
+			   NAME="Service_PreInvokeMethod"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Service_PreInvokeMethod (MethodName, Inputs: PropertySet, Outputs:PropertySet)
 {
 	if (_isInitialized == false &amp;&amp; MethodName != &quot;Init&quot;) 
 	{
-		//IgorV. 09.06.14. Added reference to property it suppress removing old logs for 
+		//IgorV. Added reference to property it suppress removing old logs for 
 		//accseleration works some proceses (inbound web services)
 		//Init(Inputs.GetProperty(&quot;WithoutRemovingOldLogs&quot;) != &quot;true&quot;);
 		Init(
 					Inputs.GetProperty(&quot;WithoutRemovingOldLogs&quot;) != &quot;true&quot;,
-					&quot;&quot;//Inputs.GetProperty(&quot;FileName&quot;) //IgorV. 12.06.20.
+					&quot;&quot;//Inputs.GetProperty(&quot;FileName&quot;) //IgorV. 
 					);
 	}
 	switch (MethodName)
@@ -1095,103 +985,26 @@ if presents childs, for each chield
 		case &quot;PrintIoXml&quot;:
 			PrintIoXml(Inputs);
 			break;
-		case &quot;PrintEventActionInputPS&quot;: //IgorV. 20.05.20 Added for print input of action of runtime events
+		case &quot;PrintEventActionInputPS&quot;: //IgorV. Added for print input of action of runtime events
 			PrintEventActionInputPS(Inputs);
-			break;
-		case &quot;SessionTaskId&quot;: //IgorV. 12.04.22
-			SessionTaskId(Inputs, Outputs);
 			break;
 		default:
 			return (ContinueOperation);
 	}
 	return (CancelOperation);
 }"
-			   SEQUENCE="18"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="17"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="SessionTaskId"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function SessionTaskId(I:PropertySet, O:PropertySet)
-{
-// IgorV. 12.04.22
-/* return property set TasksList
-PropertySet: Type: &apos;TasksList&apos; Value: &apos;&apos; PropertyCount: 0 ChildCount: 3
-CHILD
-  PropertySet: Type: &apos;12/31/2022 05:00:01&apos; Value: &apos;15728720&apos; PropertyCount: 0 ChildCount: 0
-  End PS
-CHILD
-  PropertySet: Type: &apos;12/31/2022 01:00:03&apos; Value: &apos;15728700&apos; PropertyCount: 0 ChildCount: 0
-  End PS
-CHILD
-  PropertySet: Type: &apos;12/31/2022 20:40:32&apos; Value: &apos;15728681&apos; PropertyCount: 0 ChildCount: 0
-  End PS
-End PS
-*/
-	try
-	{
-		var bc:BusComp = null; 
-		var ops:PropertySet;
-		bc = TheApplication().GetBusObject(&quot;Server Admin Runtime&quot;).GetBusComp(&quot;Enterprise Task Persistence&quot;);
-		bc.ClearToQuery();
-		bc.SetSearchSpec(&quot;O/S Proc Id&quot;, I.GetProperty(&quot;O/S Proc Id&quot;));
-		bc.SetSearchSpec(&quot;Thread Id&quot;, I.GetProperty(&quot;Thread Id&quot;));
-		//bc.SetSearchSpec(&quot;User Login&quot;, &quot;~ = &apos;&quot; + I.GetProperty(&quot;User Login&quot;) + &quot;&apos;&quot;);
-		bc.SetSearchSpec(&quot;Server Host Name&quot;, &quot;~ = &apos;&quot; + I.GetProperty(&quot;Server&quot;) + &quot;&apos;&quot;);
-		bc.ActivateField(&quot;Task Id&quot;);
-		bc.ActivateField(&quot;Task Start Time&quot;);
-		bc.SetSortSpec(&quot;Task Start Time(DESCENDING)&quot;);
-		bc.ExecuteQuery(ForwardOnly);
-	
-		ops = TheApplication().NewPropertySet();
-		ops.SetType(&quot;TasksList&quot;);
-	
-		//WriteToLog(&quot;SearchExpr = &quot; + bc.GetSearchExpr(), false);
-	
-		if (!bc.FirstRecord()) return;
-		do
-		{
-			ops.AddChild(TheApplication().NewPropertySet());
-			ops.GetChild(ops.GetChildCount() - 1).SetType(bc.GetFieldValue(&quot;Task Start Time&quot;));
-			ops.GetChild(ops.GetChildCount() - 1).SetValue(bc.GetFieldValue(&quot;Task Id&quot;));
-	
-		}while (bc.NextRecord())
-	
-		O.AddChild(ops.Copy());
-		
-		ops = null;
-		bc = null;
-	}
-	catch(e)
-	{
-		WriteToLog(e.message, true)
-	}
-	finally
-	{
-		bc = null;
-		ops = null;
-	}
-
-	function WriteToLog(Message, IsError){WriteLogRecord(&quot;BS&quot;, this.Name(), &quot;SessionTaskId&quot;, Message, IsError);}
-}"
-			   SEQUENCE="13"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
-			</BUSINESS_SERVICE_SERVER_SCRIPT>
-			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="WriteLogRecord"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function WriteLogRecord(ObjectType, ObjectName, FunctionName, Message, isError)
+			   INACTIVE="N"
+			   NAME="WriteLogRecord"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function WriteLogRecord(ObjectType, ObjectName, FunctionName, Message, isError)
 {
 /*
-	IgorV. 01.09.11. in catch added printing to file 0_WriteLogRecord.log
+	IgorV. in catch added printing to file 0_WriteLogRecord.log
 */
 	var fp = null;
 	var msgType = &quot;&quot;;
@@ -1199,10 +1012,10 @@ End PS
 	var str = &quot;&quot;;
 	try
 	{
-		if (_isInitialized == false) Init(true, &quot;&quot;) ; // IgorV. 06.09.14. For calling not via PreInvokeMethod
+		if (_isInitialized == false) Init(true, &quot;&quot;) ; // IgorV. For calling not via PreInvokeMethod
 		if (_logingType == &quot;NO_LOGS&quot;) return;
-		//msgType = isError ? &quot;ERR**&quot; : &quot;Info&quot;; IgorV. 14.07.14. Canceled. No work properly, if typeof(isError) == object
-		msgType = (isError == true) ? &quot;ERR**&quot; : &quot;Info&quot;; //IgorV. 14.07.14. Added.
+		//msgType = isError ? &quot;ERR**&quot; : &quot;Info&quot;; IgorV. Canceled. No work properly, if typeof(isError) == object
+		msgType = (isError == true) ? &quot;ERR**&quot; : &quot;Info&quot;; //IgorV. Added.
 		
 		
 		str = this.ParseDate(new Date()).GetProperty(&quot;TimeStamp&quot;) + &quot;\t&quot; + msgType + &quot;\t&quot; + ObjectType + &quot;\t&quot; + ObjectName + &quot;\t&quot; + FunctionName + &quot;\t&quot; + Message + &quot;\n&quot;;
@@ -1258,34 +1071,32 @@ End PS
 	}
 
 }"
-			   SEQUENCE="14"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="13"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="WriteLogRecordToFile"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function WriteLogRecordToFile(FileName, ObjectType, ObjectName, FunctionName, Message, isError)
+			   INACTIVE="N"
+			   NAME="WriteLogRecordToFile"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function WriteLogRecordToFile(FileName, ObjectType, ObjectName, FunctionName, Message, isError)
 {
 //var WshShell = COMCreateObject(&quot;WScript.Shell&quot;);
 //WshShell.Popup(msgType);
-// IgorV. 12.05.10. 
-//	IgorV. 01.09.11. in catch added printing to file 0_WriteLogRecordToFile.log
+// IgorV. 
+//	IgorV. in catch added printing to file 0_WriteLogRecordToFile.log
 	var msgType = &quot;&quot;;
 	var str = &quot;&quot;;
 	var fp = null;
 	var fileName = &quot;&quot;;
 	try
 	{
-		if (_isInitialized == false) Init(true, &quot;&quot;) ; // IgorV. 06.09.14. For calling not via PreInvokeMethod
+		if (_isInitialized == false) Init(true, &quot;&quot;) ; // IgorV. For calling not via PreInvokeMethod
 		//NO_LOGS|ERRORS_ONLY|FULL_LOG
 		if (_logingType == &quot;NO_LOGS&quot;) return;
 	
-		//msgType = isError ? &quot;ERR**&quot; : &quot;Info&quot;; IgorV. 14.07.14. Canceled. No work properly, if typeof(isError) == object
-		msgType = (isError == true) ? &quot;ERR**&quot; : &quot;Info&quot;; //IgorV. 14.07.14. Added.
+		//msgType = isError ? &quot;ERR**&quot; : &quot;Info&quot;; IgorV. Canceled. No work properly, if typeof(isError) == object
+		msgType = (isError == true) ? &quot;ERR**&quot; : &quot;Info&quot;; //IgorV. Added.
 		fileName = _logFile.Folder + &quot;\\&quot; + FileName;
 		str = this.ParseDate(new Date()).GetProperty(&quot;TimeStamp&quot;) + &quot;\t&quot; + msgType + &quot;\t&quot; + ObjectType + &quot;\t&quot; + ObjectName + &quot;\t&quot; + FunctionName + &quot;\t&quot; + Message + &quot;\n&quot;;
 		fp = Clib.fopen(fileName, &quot;au&quot;);
@@ -1324,26 +1135,24 @@ End PS
 	}
 
 }"
-			   SEQUENCE="15"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="14"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 			<BUSINESS_SERVICE_SERVER_SCRIPT
-			   INACTIVE="N"
-			   NAME="WriteLogRecordWrapper"
-			   PROGRAM_LANGUAGE="JS"
-			   SCRIPT="function WriteLogRecordWrapper(ips, ops)
+			   INACTIVE="N"
+			   NAME="WriteLogRecordWrapper"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function WriteLogRecordWrapper(ips, ops)
 {
-	if (ips.PropertyExists(&quot;FileName&quot;) &amp;&amp; ips.GetProperty(&quot;FileName&quot;) != &quot;*&quot; ) //IgorV. 15.08.12 Added relation to * for WF
+	if (ips.PropertyExists(&quot;FileName&quot;) &amp;&amp; ips.GetProperty(&quot;FileName&quot;) != &quot;*&quot; ) //IgorV. Added relation to * for WF
 		WriteLogRecordToFile(
 			ips.GetProperty(&quot;FileName&quot;), 
 			ips.GetProperty(&quot;ObjectType&quot;), 
 			ips.GetProperty(&quot;ObjectName&quot;), 
 			ips.GetProperty(&quot;FunctionName&quot;), 
 			ips.GetProperty(&quot;Message&quot;),
-			Clib.strlwr(ips.GetProperty(&quot;IsError&quot;)) == ToString(true) //IgorV. 29.11.10 For running from browser script (it return True/False)
+			Clib.strlwr(ips.GetProperty(&quot;IsError&quot;)) == ToString(true) //IgorV. For runnin from browser script (it return True/False)
 			);
 	else
 		WriteLogRecord(
@@ -1351,15 +1160,15 @@ End PS
 			ips.GetProperty(&quot;ObjectName&quot;), 
 			ips.GetProperty(&quot;FunctionName&quot;), 
 			ips.GetProperty(&quot;Message&quot;),
-			Clib.strlwr(ips.GetProperty(&quot;IsError&quot;)) == ToString(true) //IgorV. 29.11.10 For running from browser script (it return True/False)
+			Clib.strlwr(ips.GetProperty(&quot;IsError&quot;)) == ToString(true) //IgorV. For runnin from browser script (it return True/False)
 			);
 }"
-			   SEQUENCE="16"
-			   UPDATED="01/01/2000 00:00:00"
-			   UPDATED_BY="VIF"
-			   CREATED="01/01/2000 00:00:00"
-			   CREATED_BY="VIF">
+			   SEQUENCE="15"
+			   UPDATED_BY="VIF"
+			   CREATED_BY="VIF">
 			</BUSINESS_SERVICE_SERVER_SCRIPT>
 		</BUSINESS_SERVICE>
 	</PROJECT>
 </REPOSITORY>
+
+
